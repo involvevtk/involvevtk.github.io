@@ -1,0 +1,7 @@
+blockquote {
+  border-left: 5px solid #aeaeae;
+}
+.sidenav li>a.subheader-link {
+  pointer-events: all;
+  color: #03a9f4 !important;
+}
