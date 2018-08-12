@@ -31,6 +31,4 @@ document.addEventListener("DOMContentLoaded", function() {
   includeHTML();
   var sidenav = document.querySelectorAll(".sidenav");
   var instances = M.Sidenav.init(sidenav);
-  var parallax = document.querySelectorAll(".parallax");
-  var instances = M.Parallax.init(parallax);
 });
