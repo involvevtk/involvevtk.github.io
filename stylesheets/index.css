@@ -1,7 +1,25 @@
 blockquote {
   border-left: 5px solid #aeaeae;
 }
-.sidenav li>a.subheader-link {
+
+.sidenav li > a.subheader-link {
   pointer-events: all;
   color: #03a9f4 !important;
+}
+
+.nav-wrapper .brand-logo span {
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 24px;
+}
+.nav-wrapper .brand-logo img {
+  height: 30px;
+  padding-top: 8px;
+}
+
+nav .nav-wrapper a,
+nav .nav-wrapper ul a {
+  color: #000;
 }
