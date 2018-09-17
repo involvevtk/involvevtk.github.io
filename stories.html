@@ -12,12 +12,14 @@
     <script src="javascripts/index.js" charset="utf-8"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123414037-1"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag("js", new Date());
 
-      gtag('config', 'UA-123414037-1');
-    </script>
+gtag("config", "UA-123414037-1");
+</script>
   </head>
   <body>
     <div class="navbar-fixed">
@@ -45,11 +47,30 @@
     </ul>
 
     <div class="section white">
-      <div class="row container">
-        <h1 class="header">WE</h1>
-        <h1 class="header">RISE</h1>
-        <h1 class="header">BY LIFTING</h1>
-        <h1 class="header">OTHERS.</h1>
+      <div class="row container center">
+        <div id="fb-root"></div>
+        <script>
+        (function(d, s, id) {
+  var js,
+    fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.1";
+  fjs.parentNode.insertBefore(js, fjs);
+})(document, "script", "facebook-jssdk");
+</script>
+<div class="fb-page"
+  data-href="https://www.facebook.com/InVolve-Vatakara-481395608714906/"
+  data-tabs="timeline"
+  data-small-header="true"
+  data-adapt-container-width="true"
+  data-hide-cover="true"
+  data-show-facepile="false">
+  <blockquote cite="https://www.facebook.com/InVolve-Vatakara-481395608714906/" class="fb-xfbml-parse-ignore">
+    <a href="https://www.facebook.com/InVolve-Vatakara-481395608714906/">InVolve Vatakara</a>
+  </blockquote>
+</div>
       </div>
     </div>
 
