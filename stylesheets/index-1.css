@@ -6,6 +6,7 @@ blockquote {
   max-width: 1660px;
   margin: 0 auto;
   padding-top: 0;
+  min-height: 500px;
 }
 
 .sidenav li > a.subheader-link {
@@ -32,4 +33,11 @@ nav .nav-wrapper ul a {
 
 .about-us-cover {
   max-width: 100%;
+}
+
+.tag-line {
+  font-size: 10px;
+  letter-spacing: 4px;
+  font-weight: 600;
+  color: #317bb7;
 }
