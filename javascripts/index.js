@@ -1,7 +1,11 @@
+function initplugins() {
+  var sidenav = document.querySelectorAll(".sidenav");
+  var instances = M.Sidenav.init(sidenav);
+}
 
 function includeHTML() {
   var z, i, elmnt, file, xhttp;
-  z = document.getElementsByTagName("*");
+  z = document.getElementsByTagName("[w3-include-html]");
   for (i = 0; i < z.length; i++) {
     elmnt = z[i];
     file = elmnt.getAttribute("w3-include-html");
@@ -18,6 +22,9 @@ function includeHTML() {
           elmnt.removeAttribute("w3-include-html");
           includeHTML();
         }
+        if (i == z.length - 1) {
+          initplugins();
+        }
       };
       xhttp.open("GET", file, true);
       xhttp.send();
@@ -26,9 +33,6 @@ function includeHTML() {
   }
 }
 
-
 document.addEventListener("DOMContentLoaded", function() {
   includeHTML();
-  var sidenav = document.querySelectorAll(".sidenav");
-  var instances = M.Sidenav.init(sidenav);
 });
