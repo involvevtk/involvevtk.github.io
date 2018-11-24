@@ -41,3 +41,12 @@ nav .nav-wrapper ul a {
   font-weight: 600;
   color: #317bb7;
 }
+
+.subheader-link .home {
+  padding-top: 5px;
+  i {
+    margin: 0 5px 0 0;
+    position: relative;
+    top: -2px;
+  }
+}
