@@ -1,6 +1,15 @@
 function initplugins() {
   var sidenav = document.querySelectorAll(".sidenav");
   var instances = M.Sidenav.init(sidenav);
+
+  // activeate current page link :  white-text orange darken-2
+  var navigations = document.querySelectorAll(
+    "[href='" + window.location.pathname + "'][menu='nav']"
+  );
+  for (var i = 0; i < navigations.length; i++) {
+    navigations[i].className =
+      navigations[i].className + "white-text orange darken-2";
+  }
 }
 
 function includeHTML() {
