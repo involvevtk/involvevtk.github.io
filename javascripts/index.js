@@ -5,7 +5,7 @@ function initplugins() {
 
 function includeHTML() {
   var z, i, elmnt, file, xhttp;
-  z = document.getElementsByTagName("[w3-include-html]");
+  z = document.querySelectorAll("[w3-include-html]");
   for (i = 0; i < z.length; i++) {
     elmnt = z[i];
     file = elmnt.getAttribute("w3-include-html");
@@ -30,6 +30,9 @@ function includeHTML() {
       xhttp.send();
       return;
     }
+  }
+  if (z.length == 0) {
+    initplugins();
   }
 }
 
