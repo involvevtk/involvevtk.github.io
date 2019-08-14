@@ -49,3 +49,7 @@ nav .nav-wrapper ul a {
     top: -2px;
   }
 }
+
+.parallax-container {
+   height: 300px;
+}
