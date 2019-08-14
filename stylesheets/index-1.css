@@ -5,8 +5,6 @@ blockquote {
 .section {
   max-width: 1660px;
   margin: 0 auto;
-  padding-top: 0;
-  padding-bottom: 0;
 }
 
 .sidenav li > a.subheader-link {
