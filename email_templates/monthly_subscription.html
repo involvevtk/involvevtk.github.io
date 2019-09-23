@@ -128,7 +128,7 @@
         width: 410px;
         margin: 0 auto 20px auto;
         padding: 10px;
-        box-shadow: 0px 0px 4px -1px rgba(0, 0, 0, 0.4313725);
+        border: 1px solid #c5c5c5;
         border-radius: 5px;
         position: relative;
       }
@@ -141,11 +141,11 @@
         float: right;
       }
       .bill-ui .card .card-info {
-        position: absolute;
+        position: relative;
         font-size: 10px;
-        right: 6px;
-        bottom: 2px;
         color: #989595;
+        display: block;
+        text-align: right;
       }
       .green {
         color: green !important;
@@ -250,37 +250,37 @@
               <lable>Monthly acknowledgement</lable>
             </div>
             <div class="member-details">
-              <span>Name of the member</span> <label>Dipak Chandran P</label>
+              <span>Name of the member</span> <label>${name}</label>
             </div>
 
             <div class="card">
               <div class="lable green">
-                Amout reviced <span>Rs 400.00/-</span>
+                Amout reviced <span>${amount_received}</span>
               </div>
-              <span class="card-info">recieved on 01/09/2019</span>
+              <span class="card-info">recieved on ${amount_received_on}</span>
             </div>
             <div class="line-splitter"></div>
             <div class="card">
               <div class="lable red">
-                Previous due if any <span>Rs 100.00/-</span>
+                Previous due if any <span>${due}</span>
               </div>
             </div>
             <div class="line-splitter"></div>
             <div class="card">
               <div class="lable">
-                Previous due clearance <span>Rs 100.00/-</span>
+                Previous due clearance <span>${due_clearance}</span>
               </div>
               <div class="lable">
-                Subscription fee September 2019 <span>Rs 100.00/-</span>
+                Monthly subscription fee <span>${subscription_fee}</span>
               </div>
               <div class="lable">
-                Additional contribution <span>Rs 200.00/-</span>
+                Additional contribution <span>${addition_contribution}</span>
               </div>
             </div>
             <div class="line-splitter"></div>
             <div class="card">
               <div class="lable red">
-                Pending due amount <span>Rs 00.00/-</span>
+                Pending due amount <span>${pending_due}</span>
               </div>
             </div>
           </div>
