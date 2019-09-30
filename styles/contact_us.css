@@ -137,7 +137,8 @@ body {
   .contact-us .person .card-image img {
     border-radius: 50%;
     padding: 10px;
-    width: 100px; }
+    width: 100px;
+    height: 100px; }
   .contact-us .person .card-image .card-title {
     background: rgba(255, 255, 255, 0.45098);
     right: 0;
