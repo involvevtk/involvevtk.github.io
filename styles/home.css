@@ -235,36 +235,34 @@ body {
       text-align: right;
       float: left; } }
 
-.home .container .third-block {
-  margin: 100px auto; }
-  @media (max-width: 600px) {
-    .home .container .third-block .container {
+.home .container .third-block .featured-slider {
+  position: relative; }
+  .home .container .third-block .featured-slider .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin: 0; }
+    .home .container .third-block .featured-slider .owl-nav .owl-prev {
+      left: 0;
+      border-radius: 0 50% 50% 0;
+      position: absolute;
+      background: #fff;
+      width: 30px;
+      height: 30px;
       margin: 0;
-      max-width: 100%;
-      width: 100%; }
-      .home .container .third-block .container .col.s12 {
-        padding: 0px; } }
-  .home .container .third-block .slider .slides .caption h3 {
-    color: #5d5d5d;
-    background: rgba(255, 255, 255, 0.670588);
-    padding: 10px;
-    font-size: 32px; }
-  .home .container .third-block .slider .slides .caption h5 {
-    color: #5d5d5d;
-    background: rgba(255, 255, 255, 0.670588);
-    padding: 10px;
-    font-size: 14px;
-    transition-duration: 1s; }
-    .home .container .third-block .slider .slides .caption h5 a {
-      cursor: pointer;
-      color: #323232; }
-    .home .container .third-block .slider .slides .caption h5:hover {
-      background: #000; }
-      .home .container .third-block .slider .slides .caption h5:hover a {
-        color: #fff; }
-  .home .container .third-block .slider .indicators .indicator-item {
-    background-color: #cccccc; }
-    .home .container .third-block .slider .indicators .indicator-item.active {
-      background-color: #039be5; }
+      top: -15px; }
+      .home .container .third-block .featured-slider .owl-nav .owl-prev:hover {
+        color: #039be5; }
+    .home .container .third-block .featured-slider .owl-nav .owl-next {
+      right: 0;
+      border-radius: 50% 0 0 50%;
+      position: absolute;
+      background: #fff;
+      width: 30px;
+      height: 30px;
+      margin: 0;
+      top: -15px; }
+      .home .container .third-block .featured-slider .owl-nav .owl-next:hover {
+        color: #039be5; }
 
 /*# sourceMappingURL=home.css.map */
