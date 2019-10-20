@@ -23,15 +23,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var FEATURED_INVOLVEMENTS = [{
   url: "https://res.cloudinary.com/djb8sfqk1/image/upload/v1571526021/home-page-slider/place_holder_p5mf11.png",
   link: "https://www.facebook.com/involvevatakaraofficial/posts/1182091181978675",
-  title: "Rotary School, Kozhikode"
+  title: "Rotary School, Kozhikode",
+  description: "I am a very simple card. I am good at containing small bits of information."
 }, {
   url: "https://res.cloudinary.com/djb8sfqk1/image/upload/v1571526021/home-page-slider/place_holder_p5mf11.png",
   link: "https://www.facebook.com/involvevatakaraofficial/posts/968934716627657",
-  title: "Aralam, Kannur"
+  title: "Aralam, Kannur",
+  description: "I am a very simple card. I am good at containing small bits of information."
 }, {
   url: "https://res.cloudinary.com/djb8sfqk1/image/upload/v1571526021/home-page-slider/place_holder_p5mf11.png",
   link: "https://www.facebook.com/involvevatakaraofficial/posts/1182091181978675",
-  title: "Muthanga, Wayanad"
+  title: "Muthanga, Wayanad",
+  description: "I am a very simple card. I am good at containing small bits of information."
 }];
 
 var FeaturedInvolvements =
@@ -58,8 +61,35 @@ function (_React$Component) {
         loop: true,
         margin: 10,
         nav: true,
-        items: 1
+        items: 1,
+        stagePadding: 50,
+        autoHeight: true,
+        autoplay: true,
+        autoplayTimeout: 7500,
+        autoplayHoverPause: true
       });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "getFeatureStructure", function (item) {
+      return React.createElement("div", {
+        "class": "card featured-card"
+      }, React.createElement("div", {
+        "class": "card-image"
+      }, React.createElement("img", {
+        src: item.url,
+        alt: item.title,
+        title: item.title
+      }), React.createElement("span", {
+        "class": "card-title"
+      }, item.title)), React.createElement("div", {
+        "class": "card-stacked"
+      }, React.createElement("div", {
+        "class": "card-content"
+      }, React.createElement("p", null, item.description)), React.createElement("div", {
+        "class": "card-action"
+      }, React.createElement("a", {
+        href: item.link
+      }, "Read more"))));
     });
 
     _defineProperty(_assertThisInitialized(_this), "getFeaturedInvolvements", function () {
@@ -67,9 +97,7 @@ function (_React$Component) {
         return React.createElement("div", {
           key: index,
           className: "item"
-        }, React.createElement("img", {
-          src: item.url
-        }));
+        }, _this.getFeatureStructure(item));
       });
 
       return React.createElement(React.Fragment, null, activities);
@@ -89,10 +117,10 @@ function (_React$Component) {
 }(React.Component);
 
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("Page loaded");
-  var containerId = "featured-container";
-  var domContainer = document.getElementById(containerId);
-  ReactDOM.render(React.createElement(FeaturedInvolvements, {
-    list: FEATURED_INVOLVEMENTS
-  }), domContainer);
+  console.log("Page loaded"); // let containerId = "featured-container";
+  // let domContainer = document.getElementById(containerId);
+  // ReactDOM.render(
+  //   <FeaturedInvolvements list={FEATURED_INVOLVEMENTS} />,
+  //   domContainer
+  // );
 });
