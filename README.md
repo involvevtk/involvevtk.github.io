@@ -161,4 +161,4 @@ The `CNAME` file is intentionally not in this repo yet. When the domain is ready
 
 ## Clean URLs
 
-Pages are served without `.html` on GitHub Pages (for example `/green` for `green.html`). Always link to the clean form (`events`, `green`, `./#contact`). The plain `python3 -m http.server` preview does not understand clean URLs, so open `localhost:8080/green.html` there, or use the included `python3 /path/to/serve_clean.py` style server.
+Pages are served without `.html` on GitHub Pages (for example `/green` for `green.html`). Always link to the clean form (`events`, `green`, `./#contact`). The plain `python3 -m http.server` preview does not understand clean URLs, so open `localhost:8080/green.html` there, or run `python3 serve.py` instead, which handles clean URLs.
