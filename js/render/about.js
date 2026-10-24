@@ -1,5 +1,5 @@
 /* Home: "Who We Are" + Our Story / Mission / Vision (data/about.json). */
-import { el, url, reveal, section, para } from "../core.js?v=202610242046";
+import { el, url, reveal, section, para } from "../core.js?v=202610242053";
 
 export function renderAbout(main, about, site) {
   const { section: s, wrap } = section({ id: "about" });
@@ -18,9 +18,13 @@ export function renderAbout(main, about, site) {
     body.appendChild(el("h3", null, c.title));
     body.appendChild(el("p", null, c.text));
     li.appendChild(reveal(body, 1));
-    const fig = el("div", "story-media");
-    fig.appendChild(el("img", null, null, { src: url(c.image), alt: c.imageAlt || c.title, width: 960, height: 720, loading: "lazy", decoding: "async" }));
-    li.appendChild(reveal(fig, 2));
+    if (c.image) {
+      const fig = el("div", "story-media");
+      fig.appendChild(el("img", null, null, { src: url(c.image), alt: c.imageAlt || c.title, width: 960, height: 720, loading: "lazy", decoding: "async" }));
+      li.appendChild(reveal(fig, 2));
+    } else {
+      li.classList.add("no-media");
+    }
     list.appendChild(li);
   });
   wrap.appendChild(list);

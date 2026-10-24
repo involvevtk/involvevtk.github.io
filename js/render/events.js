@@ -1,5 +1,5 @@
 /* Events as a minimal dated list. Used by the Home teaser and the Events page (data/events.json). */
-import { el, url, link, formatDate, reveal } from "../core.js?v=202610242046";
+import { el, url, link, formatDate, reveal } from "../core.js?v=202610242053";
 
 export function sortedEvents(events) {
   return (events || []).slice().sort((a, b) => String(b.eventDate).localeCompare(String(a.eventDate)));
@@ -37,6 +37,7 @@ export function eventRow(ev, order) {
   li.appendChild(main);
 
   if (ev.bannerImage) {
+    li.classList.add("has-thumb");
     const fig = el("div", "event-thumb");
     fig.appendChild(el("img", null, null, { src: url(ev.bannerImage), alt: ev.title + " - banner image", width: 800, height: 520, loading: "lazy", decoding: "async" }));
     li.appendChild(fig);

@@ -1,6 +1,6 @@
 /* Green Project page (information only). Content: data/green.json */
-import { runPage, pageTitle } from "../layout.js?v=202610242046";
-import { loadJSON, el, url, para, button, reveal } from "../core.js?v=202610242046";
+import { runPage, pageTitle } from "../layout.js?v=202610242053";
+import { loadJSON, el, url, para, button, reveal } from "../core.js?v=202610242053";
 
 runPage("green", async ({ site, main }) => {
   const g = await loadJSON("green");

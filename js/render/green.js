@@ -1,5 +1,5 @@
 /* Home: Green Project teaser (data/home.json "green"). Plain section; the image is a neutral illustration. */
-import { el, url, link, reveal, para } from "../core.js?v=202610242046";
+import { el, url, link, reveal, para } from "../core.js?v=202610242053";
 
 export function renderGreenTeaser(main, home, site) {
   const g = home.green;

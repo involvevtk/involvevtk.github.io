@@ -38,7 +38,8 @@
 .event-thumb img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; transition: transform .8s var(--ease); }
 .event-row:hover .event-thumb img { transform: scale(1.03); }
 @media (min-width: 760px) {
-  .event-row { grid-template-columns: 110px 1fr 260px; gap: 40px; align-items: start; }
+  .event-row { grid-template-columns: 110px 1fr; gap: 40px; align-items: start; }
+  .event-row.has-thumb { grid-template-columns: 110px 1fr 260px; }
   .event-day { font-size: 3.6rem; }
   .event-thumb { grid-column: auto; margin: 0; }
 }

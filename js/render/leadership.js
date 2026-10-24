@@ -3,7 +3,7 @@
  * The whole section stays hidden while the file is an empty list [].
  * Entry: { "name": "...", "role": "...", "photo": "assets/images/people/x.jpg" }   (photo optional)
  */
-import { el, url, reveal } from "../core.js?v=202610242046";
+import { el, url, reveal } from "../core.js?v=202610242053";
 
 export function renderLeadership(main, home, people) {
   if (!Array.isArray(people) || !people.length) return;

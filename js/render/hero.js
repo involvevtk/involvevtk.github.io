@@ -1,5 +1,5 @@
 /* Home: opening statement + three quiet facts. Text comes from data/home.json ("hero", "facts"). */
-import { el, button, reveal, para } from "../core.js?v=202610242046";
+import { el, button, reveal, para } from "../core.js?v=202610242053";
 
 export function renderHero(main, home, site) {
   const h = home.hero;

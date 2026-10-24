@@ -1,5 +1,5 @@
 /* Home: souvenir magazine link (data/site.json "souvenir" + data/home.json "magazine"). */
-import { el, url, link, reveal } from "../core.js?v=202610242046";
+import { el, url, link, reveal } from "../core.js?v=202610242053";
 
 export function renderMagazine(main, home, site) {
   const m = home.magazine, sv = site.souvenir;

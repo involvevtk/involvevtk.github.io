@@ -1,6 +1,6 @@
 /* Social media links page. Links: data/social.json; page heading: "socialPage" in data/site.json */
-import { runPage, pageTitle } from "../layout.js?v=202610242046";
-import { el, link, icon, reveal } from "../core.js?v=202610242046";
+import { runPage, pageTitle } from "../layout.js?v=202610242053";
+import { el, link, icon, reveal } from "../core.js?v=202610242053";
 
 runPage("social", async ({ site, social, main }) => {
   const sp = site.socialPage;
