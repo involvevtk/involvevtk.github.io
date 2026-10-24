@@ -2,7 +2,7 @@
   "_help": "Privacy & Terms page. Each section has a heading and paragraphs (text supports [link](address), **bold**, {{email}} and {{phone}}). A section can also have a 'list'.",
   "seo": {
     "title": "Privacy & Terms | Involve",
-    "description": "Privacy and terms for the Involve Cultural and Charitable Society website: no logins, no forms, no data collection."
+    "description": "Privacy and terms for the Involve Cultural and Charitable Society website."
   },
   "title": "Privacy & Terms",
   "updated": "Last updated: October 2026",
@@ -10,7 +10,8 @@
     {
       "heading": "Privacy",
       "paragraphs": [
-        "This website is an information website for Involve Cultural and Charitable Society. It has **no login, no accounts, no forms and no comments**, and we do not ask you for any personal information here. We do not use advertising or analytics tools on this site, and we do not set cookies of our own.",
+        "This website is an information website for Involve Cultural and Charitable Society. It has **no login, no accounts, no forms and no comments**, and we do not ask you for any personal information here. We do not use advertising tools.",
+        "To understand how many people visit and which pages are useful, we use **Google Analytics**. It records anonymous usage such as the pages viewed, the approximate country, the device type and clicks on links like call, WhatsApp, email and social media. It may set cookies in your browser. We do not use it to identify you. You can block it with your browser settings or a tracking blocker, and read [how Google uses this data](https://policies.google.com/technologies/partner-sites).",
         "The site is hosted on GitHub Pages. Like any web host, GitHub may keep basic technical logs (such as your IP address and browser type) when pages are loaded. See [GitHub's privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement)."
       ]
     },

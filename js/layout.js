@@ -6,6 +6,7 @@
  */
 import { el, clear, icon, link, url, loadJSON, phoneInfo, para } from "./core.js";
 import { initMotion } from "./motion.js";
+import { initAnalytics } from "./analytics.js";
 
 /* ---------- SEO / social meta (HTML keeps static defaults; this refines them per page) ---------- */
 function setMeta(selector, attr, value) {
@@ -222,6 +223,7 @@ export async function runPage(key, build) {
     applySeo(site, result.seo, social);
     renderFooter(site, social);
     initMotion();
+    initAnalytics(site);
   } catch (err) {
     showError(main, err, site);
     if (site) { try { renderHeader(site, key); renderFooter(site, []); } catch (e) { /* ignore */ } }

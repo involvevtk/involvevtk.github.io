@@ -83,5 +83,12 @@
       "title": "Social Media Links | Involve",
       "description": "Follow Involve Cultural and Charitable Society on Facebook, YouTube, Instagram, LinkedIn and X."
     }
+  },
+  "analytics": {
+    "measurementId": "G-MD2RY6P5RH",
+    "hosts": [
+      "involve.org.in",
+      "www.involve.org.in"
+    ]
   }
 }

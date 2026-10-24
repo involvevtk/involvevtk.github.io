@@ -162,3 +162,7 @@ The `CNAME` file is intentionally not in this repo yet. When the domain is ready
 ## Clean URLs
 
 Pages are served without `.html` on GitHub Pages (for example `/green` for `green.html`). Always link to the clean form (`events`, `green`, `./#contact`). The plain `python3 -m http.server` preview does not understand clean URLs, so open `localhost:8080/green.html` there, or run `python3 serve.py` instead, which handles clean URLs.
+
+## Analytics
+
+Google Analytics 4 is set in `data/site.json` under `analytics` (`measurementId`, `hosts`). Set `measurementId` to `""` to turn it off. It only runs on the live domain, never on localhost. Tracked events: page views, `click_call`, `click_whatsapp`, `click_email`, `click_social`, `click_outbound`. The privacy page mentions it; keep that text if you keep analytics.
