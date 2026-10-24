@@ -1,6 +1,6 @@
 /* 404 page (served by GitHub Pages for unknown addresses). Paths are resolved from the script location, so it works at any URL depth. */
-import { runPage } from "../layout.js?v=202610242053";
-import { el, link, reveal } from "../core.js?v=202610242053";
+import { runPage } from "../layout.js?v=202610242100";
+import { el, link, reveal } from "../core.js?v=202610242100";
 
 runPage("", async ({ main }) => {
   const s = el("section", "notfound");

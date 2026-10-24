@@ -1,13 +1,19 @@
 /* Home: Involve Forest teaser (data/home.json "forest"). Poster always; the muted loop plays only when cheap. */
-import { el, url, link, reveal } from "../core.js?v=202610242053";
+import { el, url, link, reveal } from "../core.js?v=202610242100";
 
 export function renderForestTeaser(main, home) {
   const f = home.forest;
   const s = el("section", "forest-band");
-  const video = el("video", "forest-video", null, { muted: "", loop: "", playsinline: "", preload: "none", poster: url(f.poster), "aria-hidden": "true", tabindex: "-1" });
-  video.muted = true;
-  video.appendChild(el("source", null, null, { src: url(f.video), type: "video/mp4" }));
-  s.appendChild(video);
+  // Background: a real video when data/home.json "forest.video" is set, otherwise just the photo.
+  let video = null;
+  if (f.video) {
+    video = el("video", "forest-video", null, { muted: "", loop: "", playsinline: "", preload: "none", poster: url(f.poster), "aria-hidden": "true", tabindex: "-1" });
+    video.muted = true;
+    video.appendChild(el("source", null, null, { src: url(f.video), type: "video/mp4" }));
+    s.appendChild(video);
+  } else if (f.poster) {
+    s.appendChild(el("img", "forest-video", null, { src: url(f.poster), alt: "", width: 1600, height: 900, loading: "lazy", decoding: "async", "aria-hidden": "true" }));
+  }
 
   const wrap = el("div", "wrap forest-inner");
   wrap.appendChild(reveal(el("p", "eyebrow", f.eyebrow), 0));
@@ -22,7 +28,7 @@ export function renderForestTeaser(main, home) {
   const conn = navigator.connection || {};
   const lite = conn.saveData || /(^|-)2g$/.test(conn.effectiveType || "");
   const wide = window.matchMedia && matchMedia("(min-width: 768px)").matches;
-  if (!reduce && !lite && wide) {
+  if (video && !reduce && !lite && wide) {
     video.preload = "metadata";
     const p = video.play();
     if (p && p.catch) p.catch(() => {});

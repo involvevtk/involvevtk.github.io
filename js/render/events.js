@@ -1,5 +1,5 @@
 /* Events as a minimal dated list. Used by the Home teaser and the Events page (data/events.json). */
-import { el, url, link, formatDate, reveal } from "../core.js?v=202610242053";
+import { el, url, link, formatDate, reveal } from "../core.js?v=202610242100";
 
 export function sortedEvents(events) {
   return (events || []).slice().sort((a, b) => String(b.eventDate).localeCompare(String(a.eventDate)));

@@ -1,6 +1,6 @@
 /* Privacy & Terms page. Content: data/privacy.json */
-import { runPage, pageTitle } from "../layout.js?v=202610242053";
-import { loadJSON, el, para, reveal } from "../core.js?v=202610242053";
+import { runPage, pageTitle } from "../layout.js?v=202610242100";
+import { loadJSON, el, para, reveal } from "../core.js?v=202610242100";
 
 runPage("privacy", async ({ site, main }) => {
   const p = await loadJSON("privacy");

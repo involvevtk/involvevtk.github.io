@@ -1,7 +1,7 @@
 /* Events page. Content: data/events.json */
-import { runPage, pageTitle } from "../layout.js?v=202610242053";
-import { loadJSON, el } from "../core.js?v=202610242053";
-import { sortedEvents, renderEventList } from "../render/events.js?v=202610242053";
+import { runPage, pageTitle } from "../layout.js?v=202610242100";
+import { loadJSON, el } from "../core.js?v=202610242100";
+import { sortedEvents, renderEventList } from "../render/events.js?v=202610242100";
 
 runPage("events", async ({ site, main }) => {
   const data = await loadJSON("events");

@@ -1,5 +1,5 @@
 /* Involve - the sun / moon button in the header. Saves the choice in a cookie. */
-import { el } from "./core.js?v=202610242053";
+import { el } from "./core.js?v=202610242100";
 
 const NS = "http://www.w3.org/2000/svg";
 /* Inline SVG (no external sprite) so the icon always shows, in every browser. */
