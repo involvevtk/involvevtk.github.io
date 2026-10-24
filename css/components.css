@@ -54,12 +54,10 @@
 .social-row a:hover { background: var(--ink); color: #fff; }
 
 /* ---------- leadership (appears only when data/leadership.json has entries) ---------- */
-.leaders { list-style: none; display: grid; gap: 32px 28px; }
+.leaders { list-style: none; display: grid; gap: 32px 28px; grid-template-columns: 1fr; }
 .leader img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: var(--line); margin-bottom: 16px; }
 .leader h3 { font-size: 1.25rem; margin-bottom: .1em; }
 .leader-role { color: var(--blue); font-size: .85rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; margin: 0; }
-@media (min-width: 760px) { .leaders { grid-template-columns: repeat(3, 1fr); } }
-.leaders { grid-template-columns: 1fr; }
 @media (min-width: 760px) { .leaders { grid-template-columns: repeat(3, 1fr); } }
 .leader { border-top: 1px solid var(--ink); padding-top: 16px; }
 
