@@ -1,5 +1,5 @@
 /* Involve - the sun / moon button in the header. Saves the choice in a cookie. */
-import { el, icon } from "./core.js";
+import { el, icon } from "./core.js?v=202610242039";
 
 function apply(theme) {
   document.documentElement.setAttribute("data-theme", theme);

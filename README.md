@@ -170,3 +170,13 @@ Google Analytics 4 is set in `data/site.json` under `analytics` (`measurementId`
 ## Dark / light theme
 
 The sun/moon button in the header switches theme. The choice is saved in a cookie (`involve-theme`, one year); with no cookie the device setting is used. Colours for both themes are the CSS variables at the top of `css/base.css` (`html[data-theme="dark"]` block). `js/theme-init.js` runs first in each page's `<head>` to avoid a flash; `js/theme.js` builds the button.
+
+## Before every push: refresh the cache version
+
+GitHub Pages lets browsers keep files for about 10 minutes. To make phones pick up changes immediately, run this before you commit:
+
+```
+python3 tools/bump-version.py
+```
+
+It stamps a new `?v=` number on all CSS and JS links. Content in `data/` is always fetched fresh, so editing only data files needs nothing extra (an image replaced under the same file name can still take up to 10 minutes; use a new file name to see it at once).

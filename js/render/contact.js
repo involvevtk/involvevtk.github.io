@@ -1,6 +1,6 @@
 /* Home: contact section. Details come from data/site.json; phone/WhatsApp appear only when a real number is set. */
-import { el, link, icon, reveal, phoneInfo, para } from "../core.js";
-import { socialRow } from "../layout.js";
+import { el, link, icon, reveal, phoneInfo, para } from "../core.js?v=202610242039";
+import { socialRow } from "../layout.js?v=202610242039";
 
 export function renderContact(main, home, site, social) {
   const c = home.contact;

@@ -1,6 +1,6 @@
 /* Involve Forest page. Content: data/forest.json (Malayalam text + English summary) */
-import { runPage, pageTitle } from "../layout.js";
-import { loadJSON, el, button, reveal } from "../core.js";
+import { runPage, pageTitle } from "../layout.js?v=202610242039";
+import { loadJSON, el, button, reveal } from "../core.js?v=202610242039";
 
 runPage("forest", async ({ site, main }) => {
   const f = await loadJSON("forest");
