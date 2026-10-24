@@ -41,8 +41,8 @@
 .video-frame video { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* ---------- home + page: green ---------- */
-.green-art { background: var(--paper); aspect-ratio: 1; display: flex; align-items: center; justify-content: center; }
-.green-art img { width: 70%; max-width: 360px; }
+.green-art { aspect-ratio: 4 / 3; overflow: hidden; background: var(--paper); }
+.green-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .split-text > :last-child { margin-bottom: 0; }
 .split-green .split-text h2 { margin-bottom: .6em; }
 .lead-text { font-size: 1.15rem; }
