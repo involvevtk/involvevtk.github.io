@@ -1,5 +1,5 @@
 /* Home: Involve Forest teaser (data/home.json "forest"). Poster always; the muted loop plays only when cheap. */
-import { el, url, link, reveal } from "../core.js?v=202610242039";
+import { el, url, link, reveal } from "../core.js?v=202610242042";
 
 export function renderForestTeaser(main, home) {
   const f = home.forest;

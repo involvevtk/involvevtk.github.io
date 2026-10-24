@@ -1,5 +1,5 @@
 /* Home: introduction video (data/home.json "video"). The file is loaded only when played. */
-import { el, url, reveal, section } from "../core.js?v=202610242039";
+import { el, url, reveal, section } from "../core.js?v=202610242042";
 
 export function renderVideo(main, home) {
   const v = home.video;

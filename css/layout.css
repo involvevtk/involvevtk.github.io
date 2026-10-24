@@ -27,9 +27,9 @@
 .site-nav a[aria-current="page"]::after { transform: scaleX(1); background: var(--orange); height: 2px; }
 
 /* theme toggle (sun / moon icon) */
-.theme-toggle { position: relative; z-index: 2; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 0; background: transparent; color: var(--ink); cursor: pointer; border-radius: 50%; transition: background-color .2s; }
+.theme-toggle { position: relative; z-index: 2; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; border-radius: 50%; transition: background-color .2s; }
 .theme-toggle:hover { background: var(--paper); }
-.theme-toggle .icon { width: 22px; height: 22px; }
+.theme-toggle .icon { width: 22px; height: 22px; color: var(--ink); fill: currentColor; }
 .theme-toggle .icon-sun { display: none; }
 html[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
 html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
