@@ -65,7 +65,7 @@ export function renderEventsTeaser(main, home, eventsData) {
   t.appendChild(reveal(el("p", "eyebrow", cfg.eyebrow), 0));
   t.appendChild(reveal(el("h2", null, cfg.title), 1));
   head.appendChild(t);
-  head.appendChild(reveal(link("events.html", cfg.buttonLabel + " \u2192", "arrow-link"), 2));
+  head.appendChild(reveal(link("events", cfg.buttonLabel + " \u2192", "arrow-link"), 2));
   wrap.appendChild(head);
   const ul = el("ol", "event-list");
   renderEventList(ul, items);

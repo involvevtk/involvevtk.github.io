@@ -12,7 +12,7 @@
     "buttons": [
       {
         "label": "See our involvements",
-        "href": "events.html",
+        "href": "events",
         "style": "solid"
       },
       {
@@ -59,14 +59,14 @@
     "image": "assets/images/green-illustration.png",
     "imageAlt": "Illustration of a green tree",
     "buttonLabel": "Read about the Green Project",
-    "href": "green.html"
+    "href": "green"
   },
   "forest": {
     "eyebrow": "Involve Forest",
     "title": "A forest for tomorrow",
     "text": "A forest for tomorrow, for the earth and for the birds.",
     "linkLabel": "Click to read more",
-    "href": "forest.html",
+    "href": "forest",
     "video": "assets/video/involve-forest.mp4",
     "poster": "assets/images/forest-poster.jpg"
   },

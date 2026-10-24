@@ -27,32 +27,32 @@
     {
       "key": "home",
       "label": "Home",
-      "href": "index.html"
+      "href": "./"
     },
     {
       "key": "about",
       "label": "About",
-      "href": "index.html#about"
+      "href": "./#about"
     },
     {
       "key": "events",
       "label": "Events",
-      "href": "events.html"
+      "href": "events"
     },
     {
       "key": "green",
       "label": "Green Project",
-      "href": "green.html"
+      "href": "green"
     },
     {
       "key": "forest",
       "label": "Involve Forest",
-      "href": "forest.html"
+      "href": "forest"
     },
     {
       "key": "contact",
       "label": "Contact",
-      "href": "index.html#contact"
+      "href": "./#contact"
     }
   ],
   "footer": {
@@ -62,11 +62,11 @@
     "links": [
       {
         "label": "Social media links",
-        "href": "social-media-links.html"
+        "href": "social-media-links"
       },
       {
         "label": "Privacy & Terms",
-        "href": "privacy.html"
+        "href": "privacy"
       }
     ],
     "copyright": "Involve Cultural and Charitable Society, Vatakara. All rights reserved."

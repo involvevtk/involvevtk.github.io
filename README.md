@@ -157,3 +157,8 @@ The `CNAME` file is intentionally not in this repo yet. When the domain is ready
 * Flat design: no shadows, no gradients. Motion (fade-in on scroll, hover lines) is switched off automatically for visitors who prefer reduced motion.
 * Accessibility: skip link, visible keyboard focus, 44px tap targets, alt text for images.
 * The images and videos in `assets/` other than the logo and icons are **placeholders**; replace them with real files of the same name or update the paths in the JSON.
+
+
+## Clean URLs
+
+Pages are served without `.html` on GitHub Pages (for example `/green` for `green.html`). Always link to the clean form (`events`, `green`, `./#contact`). The plain `python3 -m http.server` preview does not understand clean URLs, so open `localhost:8080/green.html` there, or use the included `python3 /path/to/serve_clean.py` style server.

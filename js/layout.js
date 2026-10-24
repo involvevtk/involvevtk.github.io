@@ -30,8 +30,8 @@ function applySeo(site, seo, social) {
   setMeta('meta[name="twitter:title"]', "content", title);
   setMeta('meta[name="twitter:description"]', "content", desc);
   const root = site.siteUrl.replace(/\/?$/, "/");
-  const file = location.pathname.split("/").pop();
-  const pageUrl = root + (file && file !== "index.html" ? file : "");
+  const file = location.pathname.split("/").pop().replace(/\.html$/, "");
+  const pageUrl = root + (file && file !== "index" ? file : "");
   if (!document.head.querySelector('meta[name="robots"][content*="noindex"]')) {
     let canon = document.head.querySelector('link[rel="canonical"]');
     if (!canon) { canon = document.createElement("link"); canon.rel = "canonical"; document.head.appendChild(canon); }
@@ -71,7 +71,7 @@ function renderHeader(site, activeKey) {
   mount.className = "site-header";
   const inner = el("div", "wrap header-inner");
 
-  const brand = link("index.html", "", "brand");
+  const brand = link("./", "", "brand");
   brand.setAttribute("aria-label", site.name + " - home");
   const logo = el("img", null, null, { src: url(site.logo), width: 40, height: 40, alt: "" });
   brand.appendChild(logo);

@@ -8,7 +8,7 @@ runPage("", async ({ main }) => {
   w.appendChild(reveal(el("p", "notfound-code", "404", { "aria-hidden": "true" }), 0));
   w.appendChild(reveal(el("h1", null, "Page not found"), 1));
   w.appendChild(reveal(el("p", "lead", "Sorry, we could not find the page you were looking for."), 2));
-  w.appendChild(reveal(link("index.html", "Go back to home", "btn btn-solid"), 3));
+  w.appendChild(reveal(link("./", "Go back to home", "btn btn-solid"), 3));
   s.appendChild(w);
   main.appendChild(s);
   return { seo: { title: "Page not found | Involve", description: "Page not found." } };

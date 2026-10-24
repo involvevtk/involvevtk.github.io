@@ -18,12 +18,12 @@
   "actions": [
     {
       "label": "Contact us",
-      "href": "index.html#contact",
+      "href": "./#contact",
       "style": "solid"
     },
     {
       "label": "Green Project",
-      "href": "green.html",
+      "href": "green",
       "style": "outline"
     }
   ]
