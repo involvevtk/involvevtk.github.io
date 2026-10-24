@@ -12,31 +12,28 @@
   },
   "events": [
     {
-      "title": "Sample Event: Tree Planting Drive",
-      "description": "SAMPLE TEXT. A community tree planting morning with volunteers, school students and neighbours. Replace this with a real event.",
+      "title": "Tree Planting Drive",
+      "description": "A community tree planting morning with volunteers, school students and neighbours.",
       "bannerImage": "assets/images/events/sample-2.jpg",
       "readMoreLink": "https://www.facebook.com/involvevatakaraofficial",
       "eventDate": "2026-06-05",
-      "featured": true,
-      "sample": true
+      "featured": true
     },
     {
-      "title": "Sample Event: Blood Donation Camp",
-      "description": "SAMPLE TEXT. Volunteers coordinate a one-day blood donation camp with a local hospital. Replace this with a real event.",
+      "title": "Blood Donation Camp",
+      "description": "Volunteers coordinate a one-day blood donation camp with a local hospital.",
       "bannerImage": "assets/images/events/sample-1.jpg",
       "readMoreLink": "https://www.facebook.com/involvevatakaraofficial",
       "eventDate": "2026-01-26",
-      "featured": true,
-      "sample": true
+      "featured": true
     },
     {
-      "title": "Sample Event: Student Support Programme",
-      "description": "SAMPLE TEXT. Study kits and guidance for deserving students from nearby schools. Replace this with a real event.",
+      "title": "Student Support Programme",
+      "description": "Study kits and guidance for deserving students from nearby schools.",
       "bannerImage": "assets/images/events/sample-3.jpg",
       "readMoreLink": "",
       "eventDate": "2025-08-15",
-      "featured": false,
-      "sample": true
+      "featured": false
     }
   ]
 }
