@@ -1,0 +1,84 @@
+/* ==========================================================================
+   Involve - base: colours, type, buttons, links, motion.
+   Palette: black, white, greys + the two logo colours (blue, orange) as accents.
+   ========================================================================== */
+:root {
+  --ink: #111111;
+  --text: #2a2a2a;
+  --muted: #6b6b6b;
+  --line: #e3e3e3;
+  --paper: #f6f6f6;
+  --white: #ffffff;
+  --blue: #146cb4;     /* logo blue   - links, labels, some headings */
+  --orange: #f47800;   /* logo orange - large accents and rules only (low contrast on white) */
+
+  --serif: Georgia, "Times New Roman", "Noto Serif", serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Malayalam", "Nirmala UI", sans-serif;
+
+  --wrap: 1120px;
+  --gutter: 24px;
+  --section: clamp(72px, 12vw, 140px);
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 88px; }
+body { margin: 0; font-family: var(--sans); font-size: 1.0625rem; line-height: 1.7; color: var(--text); background: var(--white); overflow-x: hidden; animation: page-in .6s var(--ease) both; }
+@keyframes page-in { from { opacity: 0; } to { opacity: 1; } }
+html.menu-open { overflow: hidden; }
+
+img, video, svg { max-width: 100%; height: auto; }
+img { display: block; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; color: var(--ink); line-height: 1.12; margin: 0 0 .5em; letter-spacing: -.01em; }
+h1 { font-size: clamp(2.6rem, 9vw, 5rem); }
+h2 { font-size: clamp(2rem, 5.2vw, 3.25rem); }
+h3 { font-size: clamp(1.35rem, 2.6vw, 1.75rem); }
+p { margin: 0 0 1.2em; }
+ul, ol { margin: 0; padding: 0; }
+address { font-style: normal; }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+a { color: var(--blue); text-decoration: none; }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.skip-link { position: absolute; left: -999px; top: 8px; background: var(--ink); color: #fff; padding: 10px 16px; z-index: 300; }
+.skip-link:focus { left: 8px; }
+
+/* small label above headings: blue text, short orange rule */
+.eyebrow, .label { display: flex; align-items: center; gap: 12px; margin: 0 0 18px; font-family: var(--sans); font-size: .78rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--blue); }
+.eyebrow::before { content: ""; width: 28px; height: 2px; background: var(--orange); flex: none; }
+.lead { font-size: clamp(1.15rem, 2.2vw, 1.35rem); color: var(--muted); max-width: 40em; }
+
+/* text link with an underline that slides in */
+.arrow-link, .prose a, .doc-body a, .footer-links a, .contact-big {
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
+  transition: background-size .35s var(--ease), color .2s;
+  padding-bottom: 2px;
+}
+.arrow-link:hover, .prose a:hover, .doc-body a:hover, .footer-links a:hover, .contact-big:hover { background-size: 100% 1px; }
+.arrow-link { font-weight: 600; background-size: 100% 1px; display: inline-flex; align-items: center; min-height: 44px; padding: 0 0 2px; }
+.arrow-link:hover { background-size: 0 1px; }
+.doc-body a, .prose a, .split-text p a { background-size: 100% 1px; }
+
+/* buttons: flat, square, fill slides in on hover */
+.btn { --bg: var(--ink); --fg: #fff; --bd: var(--ink); --hbg: #fff; --hfg: var(--ink);
+  position: relative; isolation: isolate; overflow: hidden; display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 52px; padding: 12px 30px; border: 1px solid var(--bd); background: var(--bg); color: var(--fg);
+  font: inherit; font-size: .95rem; font-weight: 600; letter-spacing: .03em; cursor: pointer; transition: color .3s var(--ease); }
+.btn::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--hbg); transform: translateX(-101%); transition: transform .4s var(--ease); }
+.btn:hover { color: var(--hfg); }
+.btn:hover::before { transform: none; }
+.btn-outline { --bg: transparent; --fg: var(--ink); --bd: var(--ink); --hbg: var(--ink); --hfg: #fff; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 14px; }
+.btn .icon { width: 1.15em; height: 1.15em; fill: currentColor; }
+.icon { width: 1.3em; height: 1.3em; fill: currentColor; flex: none; }
+
+/* scroll reveal (switched on only when JS runs; see js/motion.js) */
+.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .8s var(--ease), transform .8s var(--ease); transition-delay: calc(var(--d, 0) * 90ms); }
+.js .reveal.is-visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  body { animation: none; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}

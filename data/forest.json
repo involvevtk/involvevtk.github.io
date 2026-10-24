@@ -1,0 +1,30 @@
+{
+  "_help": "Involve Forest page. 'paragraphs' are shown in Malayalam; 'summary' is the English summary shown above them.",
+  "seo": {
+    "title": "Involve Forest | Involve Cultural and Charitable Society",
+    "description": "Involve Forest: our dream of creating and protecting a permanent forest for tomorrow, as shade for the earth and nests for birds."
+  },
+  "eyebrow": "A forest for tomorrow",
+  "title": "Involve Forest",
+  "summaryTitle": "In brief (English summary)",
+  "summary": "Villages are rapidly giving way to urbanisation, and shade, trees, birds, clean air and clean water are slowly disappearing. To send a strong message against deforestation, Involve has begun the Involve Forest initiative: to acquire a piece of land and create and care for an artificial forest there, protected for all time, as shade for the earth, nests for birds and a true picture of nature for people. We hope everyone will stand with us as the water and fertiliser of the Involve tree.",
+  "textLang": "ml",
+  "paragraphs": [
+    "കാലം ബാക്കി വച്ച ബാക്കിയുള്ള ഗ്രാമങ്ങളും അതിന്റെ ഭൂപ്രകൃതിയടക്കമുള്ള മുഖച്ഛായ മാറ്റി ആധുനികതയുടെ കൂടെ നടക്കാൻ വേണ്ടി നഗരവൽക്കരണത്തിന്റെ പാതയിലാണെന്ന് നമുക്ക് കാണാൻ സാധിക്കും. തത്‌ഫലം തണലും, മരക്കൂട്ടങ്ങളും, കിളികളും പറവകളും, ശുദ്ധവായുവും, ശുദ്ധജലവും മെല്ലെ മെല്ലെ കൺമുമ്പിൽ നിന്നും അപ്രത്യക്ഷമായി കൊണ്ടിരിക്കുകയാണല്ലോ. ഈ അവസരത്തിലാണ് വനനശീകരണത്തിനെതിരെ ശക്തമായ ഒരു സന്ദേശം നൽകി, സാമൂഹിക അവബോധം ലക്ഷ്യമാക്കിക്കൊണ്ട് ഇൻവോൾവ് കൾച്ചറൽ ആൻഡ് ചാരിറ്റബിൾ സൊസൈറ്റി \"ഇൻവോൾവ് ഫോറെസ്റ്റ് \"എന്ന ആശയം സഫലീകരിക്കാനുള്ള പ്രവർത്തനങ്ങൾക്ക് തുടക്കം കുറിച്ചത്.",
+    "ഇൻവോൾവിനു സാധ്യമായ ഭൂമി സ്വന്തമാക്കി ,അവിടെ എന്നന്നേക്കുമായി ഒരു കൃത്രിമ വനം നിർമിച്ച് പരിപാലിച്ച് പോവുക എന്നതാണ് ഉദ്ദേശിക്കുന്നത്. കാലമെത്രകഴിഞ്ഞാലും ആധുനികതയുടെ ആക്രമണത്തിൽ നിന്നും എല്ലാ രീതിയിലും സംരക്ഷിച്ചുകൊണ്ട് അത്രയും സ്ഥലം ഭൂമിക്കു തണലായും, പറവകൾക്കു കൂടുകളായും, മനുഷ്യർക്ക് എല്ലാ അർത്ഥത്തിലും പ്രകൃതിയുടെ നേർചിത്രമായും നിലനിർത്തുക എന്ന ദൗത്യം നിറവേറ്റാൻ ഇൻവോൾവ് പ്രതിജ്ഞാബദ്ധരായിരിക്കും. വലിയ ഭൂമിയിൽ നാമമാത്രമായ ഇത്തിരി സ്ഥലത്തു നാളേക്കുവേണ്ടി ഒരു വനം നിർമിച്ച്‌ സംരക്ഷിക്കുകവഴി പ്രകൃതിയോട് ഇണങ്ങി, മനുഷ്യനിർമ്മിത പ്രകൃതിക്ഷോഭങ്ങളെ തടയാനാകും വിധം തടഞ്ഞ്, പ്രകൃതി സ്റ്റേഹിയായി ജീവിക്കുക എന്നുള്ള സന്ദേശമാണ് ഇൻവോൾവ് സമൂഹത്തിനു മുന്നിൽ വെക്കുന്നത്.",
+    "ഈ ഉദ്യമത്തെ അതിന്റെ പൂർണ്ണമായ അർത്ഥത്തിൽ ഉൾകൊണ്ട് ഇൻവോൾവ് എന്ന വൃക്ഷത്തിന്റെ വെള്ളവും വളവുമായി കൂടെ നിന്ന്, ആകാശത്തേക്ക് ശാഖിഖകൾ വിരിയിക്കുവാൻ ഏവരും കൂടെയുണ്ടാവുമെന്ന് പ്രത്യാശിക്കുന്നു."
+  ],
+  "signoff": "Team Involve",
+  "actions": [
+    {
+      "label": "Contact us",
+      "href": "index.html#contact",
+      "style": "solid"
+    },
+    {
+      "label": "Green Project",
+      "href": "green.html",
+      "style": "outline"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "_help": "Events. Add new events to the 'events' list. Newest date is shown first automatically. See README 'How to update content'.",
+  "seo": {
+    "title": "Events | Involve",
+    "description": "Events and activities of Involve Cultural and Charitable Society, Vatakara, Kerala."
+  },
+  "page": {
+    "eyebrow": "Our activities",
+    "title": "Involvements",
+    "intro": "Events and activities of Involve.",
+    "emptyText": "No events to show yet."
+  },
+  "events": [
+    {
+      "title": "Sample Event: Tree Planting Drive",
+      "description": "SAMPLE TEXT. A community tree planting morning with volunteers, school students and neighbours. Replace this with a real event.",
+      "bannerImage": "assets/images/events/sample-2.jpg",
+      "readMoreLink": "https://www.facebook.com/involvevatakaraofficial",
+      "eventDate": "2026-06-05",
+      "featured": true,
+      "sample": true
+    },
+    {
+      "title": "Sample Event: Blood Donation Camp",
+      "description": "SAMPLE TEXT. Volunteers coordinate a one-day blood donation camp with a local hospital. Replace this with a real event.",
+      "bannerImage": "assets/images/events/sample-1.jpg",
+      "readMoreLink": "https://www.facebook.com/involvevatakaraofficial",
+      "eventDate": "2026-01-26",
+      "featured": true,
+      "sample": true
+    },
+    {
+      "title": "Sample Event: Student Support Programme",
+      "description": "SAMPLE TEXT. Study kits and guidance for deserving students from nearby schools. Replace this with a real event.",
+      "bannerImage": "assets/images/events/sample-3.jpg",
+      "readMoreLink": "",
+      "eventDate": "2025-08-15",
+      "featured": false,
+      "sample": true
+    }
+  ]
+}

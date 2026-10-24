@@ -1,0 +1,38 @@
+{
+  "_help": "Green Project page. Text supports [link text](address) and **bold**.",
+  "seo": {
+    "title": "Green Project | Involve Nature Cell",
+    "description": "Involve Green is an eco endeavour by Involve to promote nature friendly living, through trees, green spaces, tiny forests, big forests and agricultural farms."
+  },
+  "eyebrow": "Involve Nature Cell",
+  "title": "Green Project",
+  "image": "assets/images/green-illustration.png",
+  "imageAlt": "Illustration of a green tree",
+  "paragraphs": [
+    "Involve Green is an eco endeavour by Involve to promote nature friendly living. It is a green initiative that encourages the society to embrace nature by promoting the origination and maintenance of vegetations such as Trees, Green Spaces, Tiny Forests, Big Forests and Agricultural Farms. This Project will appreciate the people who contribute to our nature and inspire others to do the same by creating and maintaining different types of Green Life in their surroundings."
+  ],
+  "listTitle": "Green Life we promote",
+  "list": [
+    "Trees",
+    "Green Spaces",
+    "Tiny Forests",
+    "Big Forests",
+    "Agricultural Farms"
+  ],
+  "closing": [
+    "Read about our larger dream on the [Involve Forest](forest.html) page.",
+    "Want to know more about the Green Project? Write to {{email}} or use the details on our [contact section](index.html#contact)."
+  ],
+  "actions": [
+    {
+      "label": "Contact us",
+      "href": "index.html#contact",
+      "style": "solid"
+    },
+    {
+      "label": "See our involvements",
+      "href": "events.html",
+      "style": "outline"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://involve.org.in/sitemap.xml
+Sitemap: https://involvevtk.github.io/sitemap.xml

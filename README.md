@@ -1,99 +1,159 @@
-# Involve Cultural and Charitable Society – static website
+# Involve - website
 
-Plain HTML, CSS and vanilla JavaScript. No framework, no build step, no server, no database, no login.
-Intended to be hosted on **GitHub Pages** at **https://involve.org.in**.
+Static website for **Involve Cultural and Charitable Society**, Vatakara, Kozhikode, Kerala.
+Plain HTML, CSS and JavaScript. No framework, no build step, no database.
+Live at <https://involvevtk.github.io/>.
 
-> Involve Cultural and Charitable Society, Vatakara, Kozhikode (Dist.), Kerala · Reg. No. KKD/CA/378/2016 · Affiliated to Nehru Yuva Kendra Sangathan
+All text lives in JSON files in [`data/`](data/). The pages are small HTML shells that load those files with JavaScript, so **you update the site by editing a data file, not the code**.
 
 ## Folder structure
 
 ```
-index.html                 Home (hero, intro video, About, events teaser, Green + Forest teasers, Petrichore, office bearers, contact)
-events.html                All events (rendered from js/events-data.js)
-green.html                 Green Project (info only)
-forest.html                Involve Forest
-social-media-links.html    Facebook, YouTube, Instagram, LinkedIn, X
-privacy.html               Short privacy policy for a static site
-404.html                   Not-found page (GitHub Pages serves it automatically)
-sitemap.xml, robots.txt    SEO files
-CNAME                      Custom domain for GitHub Pages (involve.org.in)
-.nojekyll                  Tells GitHub Pages to serve files as-is
-favicon.ico, *.png         Favicons / app icons
-css/style.css              All styles
-js/config.js               Office phone number (single place to edit)
-js/events-data.js          Event list (hand-edited)
-js/events.js               Renders events on events.html and the home teaser
-js/main.js                 Mobile menu, phone buttons, forest video autoplay rules
-assets/images/             Logo, posters, event banners, people, About images
-assets/video/              involve-intro.mp4, involve-forest.mp4
-assets/icons/sprite.svg    Social/contact icons
+.
+├── index.html                  Home
+├── events.html                 Events
+├── green.html                  Green Project
+├── forest.html                 Involve Forest
+├── social-media-links.html     Social media links
+├── privacy.html                Privacy & Terms
+├── 404.html                    "Page not found"
+├── data/                       <- ALL CONTENT (edit these)
+│   ├── site.json                 name, address, email, phone, menu, footer, souvenir link, SEO defaults
+│   ├── social.json               social media links
+│   ├── home.json                 home page texts (hero, facts, video, teasers, contact)
+│   ├── about.json                "Who We Are": Our Story / Mission / Vision
+│   ├── events.json               events list
+│   ├── green.json                Green Project page
+│   ├── forest.json               Involve Forest page
+│   ├── privacy.json              Privacy & Terms page
+│   └── leadership.json           office bearers (empty = section hidden)
+├── js/                         code (no need to edit for content changes)
+│   ├── core.js                   helpers: load JSON, build elements, links, phone check
+│   ├── layout.js                 header, menu, footer, SEO tags (built from data/site.json)
+│   ├── motion.js                 scroll reveal and header-on-scroll
+│   ├── pages/                    one small script per page (home, events, green, ...)
+│   └── render/                   one renderer per home section (hero, about, events, ...)
+├── css/
+│   ├── base.css                  colours, type, buttons, motion
+│   ├── layout.css                header, menu, footer
+│   ├── components.css            lists, events, social icons, leadership
+│   └── pages.css                 page and section specific styles
+├── assets/
+│   ├── images/                   logo, event banners, section images, share image
+│   ├── icons/sprite.svg          social and contact icons
+│   └── video/                    intro and forest videos
+├── sitemap.xml, robots.txt
+└── favicon.ico, favicon-32x32.png, apple-touch-icon.png, android-chrome-512x512.png
 ```
 
-The header and footer are repeated in every HTML file (no includes on purpose). If you change the menu or footer, edit all 7 pages.
+## How to update content
 
-## Preview locally
+General rules for every JSON file:
 
-```
-cd involve-static
-python3 -m http.server 8080
-```
-Open http://localhost:8080. (Open it through a server, not by double-clicking the file, so that scripts and videos load properly.)
+* Change only the text between the quotes. Keep the quotes, commas, `[ ]` and `{ }`.
+* Each file has a `_help` line at the top; it is ignored by the site.
+* A mistake (for example a missing comma) makes that page show "this page could not load". Paste the file into <https://jsonlint.com> to find it.
+* In longer texts you can use `[link text](https://example.com)` for a link, `**bold**` for bold, `{{email}}` for the office email and `{{phone}}` for the office phone.
+* Images go in `assets/images/`; write their path in the JSON, for example `"assets/images/events/camp.jpg"`.
 
-## Change the office phone number
+### `data/site.json` - details used on every page
 
-Edit **`js/config.js`** and set `PHONE` in international format, e.g. `"+919876543210"`.
-This one value drives the Call button, the WhatsApp button and the displayed number.
-While it is still `+91XXXXXXXXXX` (the placeholder) the buttons are disabled and the page says "Office number coming soon".
+| Field | What it does |
+|---|---|
+| `name`, `fullName`, `orgType`, `tagline` | organisation name shown in header, footer and search results |
+| `siteUrl` | public address of the site (used for search/share tags). **Change it when the domain changes** |
+| `address` | list of address lines |
+| `registrationNumber`, `affiliation` | shown in footer and contact section |
+| `email` | office email (shown in footer, contact, privacy page, no-JS message) |
+| `phone` | the ONE office phone number, see below |
+| `whatsappMessage` | first message when someone taps WhatsApp |
+| `souvenir` | `title`, `url` (flip-book link) and `cover` image of the souvenir magazine |
+| `nav` | main menu: `label` and `href` for each item (order = order on screen) |
+| `footer` | footer headings, extra links and the copyright line |
+| `socialPage` | heading, intro and search text of the social media page |
+| `seo` | default page title and description |
 
-## How to add an event
+**Office phone.** `phone` currently holds the placeholder `+91XXXXXXXXXX`. While it is not a real number the site hides every phone, Call and WhatsApp item. To switch them on, replace it with the number in international format, for example `"+919876543210"` (plus sign, country code, digits only). This is the only place the number is stored.
 
-1. Put a banner image in `assets/images/events/` (about 1200×675 px, JPG, under ~200 KB).
-2. Open **`js/events-data.js`** and add an object to the list:
+### `data/social.json` - social media
 
-```js
+A list; one entry per network: `id` (`facebook`, `youtube`, `instagram`, `linkedin`, `x`), `label`, `handle` (shown on the Social page) and `url`. Delete an entry to hide it; to add a network, add its icon to `assets/icons/sprite.svg` first.
+
+### `data/home.json` - home page texts
+
+`hero` (small heading, title, subtitle, text, buttons), `facts` (the four-column strip: `label` and `value`), `video` (title, `src`, `poster`), `events` (heading and how many to show, `maxItems`), `green`, `forest`, `magazine`, `leadership` (heading only) and `contact` (headings and intro).
+
+### `data/about.json` - Who We Are
+
+`eyebrow`, `title`, `intro` and `cards`: the three rows (Our Story, Mission, Vision), each with `title`, `text`, `image`, `imageAlt`.
+
+### `data/events.json` - events
+
+Add one block per event inside `"events": [ ... ]`, newest anywhere (the site sorts by date):
+
+```json
 {
-  title: "Tree Planting Drive 2026",
-  description: "One or two sentences about the event.",
-  bannerImage: "assets/images/events/tree-planting-2026.jpg",
-  readMoreLink: "https://example.com/full-story",   // or "" to hide the Read more button
-  eventDate: "2026-06-05",                          // YYYY-MM-DD
-  featured: true                                    // true = also shown on the home page (max 4 newest)
+  "title": "Tree Planting Drive",
+  "description": "Short description, one or two sentences.",
+  "bannerImage": "assets/images/events/tree-planting.jpg",
+  "readMoreLink": "https://example.com/report",
+  "eventDate": "2026-06-05",
+  "featured": true
 }
 ```
-3. Delete the three `sample: true` events once you have real ones.
-4. Order in the file does not matter; the site sorts by date, newest first. Save, commit, push.
 
-## Placeholder content to replace
+* `eventDate` must be `YYYY-MM-DD`. Future dates get an "Upcoming" label.
+* `featured: true` shows the event on the home page (the first three are used).
+* `bannerImage` and `readMoreLink` are optional; leave them out to hide the image or link.
+* The three current events are **samples** (they carry `"sample": true` and a "Sample" label). Delete them or replace them with real ones.
+* Year filter buttons on the Events page appear automatically.
 
-The original Cloudinary images/videos were no longer available when this site was built, so these files are clearly-labelled placeholders using the final file names. Replace them with the real files (same name, or update the HTML):
+### `data/green.json`, `data/forest.json`, `data/privacy.json` - inner pages
 
-- `assets/video/involve-intro.mp4`, `assets/images/intro-poster.jpg`
-- `assets/video/involve-forest.mp4`, `assets/images/forest-poster.jpg`
-- `assets/images/about/our-story.jpg`, `our-mission.jpg`, `our-vision.jpg`
-- `assets/images/petrichore-cover.jpg`
-- `assets/images/people/*.jpg` (officer photos – currently initials avatars)
-- `assets/images/events/sample-*.jpg`
-- `assets/images/og-image.jpg` (social share image, 1200×630)
+Each holds the page `seo` (title and description), heading text and `paragraphs` (a list; one entry per paragraph). `green.json` also has `list` (the "Green Life we promote" items) and `actions` (buttons). `forest.json` has the English `summary` and the Malayalam `paragraphs`. `privacy.json` has `sections`, each with `heading`, `paragraphs` and optionally `list`; set `ordered: true` for a numbered list or `collapsible` for a fold-out.
 
-Keep videos under ~25 MB (GitHub warns at 50 MB, blocks at 100 MB). Compress with:
+### `data/leadership.json` - office bearers
+
+Currently an empty list `[]`, so the whole section is **hidden**. When the correct details are ready, add entries and the section appears on the home page automatically:
+
+```json
+[
+  { "name": "Full Name", "role": "President", "photo": "assets/images/people/full-name.jpg" },
+  { "name": "Full Name", "role": "Secretary" }
+]
 ```
-ffmpeg -i in.mp4 -vf "scale=-2:720" -c:v libx264 -crf 28 -preset slow -an -movflags +faststart out.mp4
+
+`photo` is optional. Square or 4:5 portraits work best.
+
+## No JavaScript
+
+Every page contains a `<noscript>` message with the office email and links to all pages. If the office email changes, update it in `data/site.json` **and** in the `<noscript>` block of each HTML file.
+
+## Preview on your computer
+
 ```
-(drop `-an` for the intro video if it has sound).
+python3 -m http.server 8080
+```
 
-## Deploy to GitHub Pages with involve.org.in
+Open <http://localhost:8080>. (Opening the HTML files directly from disk does not work because browsers block `fetch` on `file://`.)
 
-1. Create a GitHub repository and push this folder to the `main` branch.
-2. Repo **Settings → Pages**: Source = *Deploy from a branch*, branch `main`, folder `/ (root)`.
-3. The `CNAME` file already contains `involve.org.in`; in Settings → Pages confirm the custom domain and tick **Enforce HTTPS** once the certificate is ready.
-4. At your DNS provider for `involve.org.in`:
-   - `A` records for the apex `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - (optional) `CNAME` for `www` → `<your-github-user>.github.io`
-5. Wait for DNS to propagate (minutes to a few hours).
+## Publishing (GitHub Pages)
 
-`404.html` uses root-absolute paths (`/css/style.css`), which is correct for a custom domain served at the root.
+The site is served from the `main` branch by GitHub Pages. Commit and push your change; it is live in about a minute:
 
-## Notes
+```
+git add -A && git commit -m "Update content" && git push origin main
+```
 
-- No cookies, no analytics, no forms, no data collection.
-- Social links open the third-party sites; see `privacy.html`.
+Editing a JSON file directly on github.com (pencil icon) and committing also works.
+
+### When the real domain (involve.org.in) goes live
+
+The `CNAME` file is intentionally not in this repo yet. When the domain is ready: add a file named `CNAME` containing `involve.org.in`, set `siteUrl` in `data/site.json` to `https://involve.org.in/`, and replace `https://involvevtk.github.io/` with the new address in `sitemap.xml`, `robots.txt` and the `og:url`/`canonical` tags in the HTML files.
+
+## Design notes
+
+* Colours: black, white and greys, with the two logo colours (blue `#146cb4`, orange `#f47800`) for some headings, labels and links. Defined at the top of `css/base.css`.
+* Flat design: no shadows, no gradients. Motion (fade-in on scroll, hover lines) is switched off automatically for visitors who prefer reduced motion.
+* Accessibility: skip link, visible keyboard focus, 44px tap targets, alt text for images.
+* The images and videos in `assets/` other than the logo and icons are **placeholders**; replace them with real files of the same name or update the paths in the JSON.

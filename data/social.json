@@ -1,0 +1,32 @@
+[
+  {
+    "id": "facebook",
+    "label": "Facebook",
+    "handle": "involvevatakaraofficial",
+    "url": "https://www.facebook.com/involvevatakaraofficial"
+  },
+  {
+    "id": "youtube",
+    "label": "YouTube",
+    "handle": "Involve channel",
+    "url": "https://www.youtube.com/channel/UCENIyE2EiruNh7Cm5zmxXrA"
+  },
+  {
+    "id": "instagram",
+    "label": "Instagram",
+    "handle": "@involve.vatakara",
+    "url": "https://www.instagram.com/involve.vatakara/"
+  },
+  {
+    "id": "linkedin",
+    "label": "LinkedIn",
+    "handle": "involve-vatakara",
+    "url": "https://www.linkedin.com/in/involve-vatakara-3bba9b209/"
+  },
+  {
+    "id": "x",
+    "label": "X (Twitter)",
+    "handle": "@InvolveVatakara",
+    "url": "https://twitter.com/InvolveVatakara"
+  }
+]

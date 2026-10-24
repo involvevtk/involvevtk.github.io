@@ -1,0 +1,87 @@
+{
+  "_help": "Site-wide details used on every page (header, footer, contact). Edit values only; keep the quotes and commas.",
+  "siteUrl": "https://involvevtk.github.io/",
+  "name": "Involve",
+  "fullName": "Involve Cultural and Charitable Society",
+  "orgType": "Cultural and Charitable Society",
+  "tagline": "A forum of like-minded people supporting social, cultural and educational activities.",
+  "logo": "assets/images/logo-96.png",
+  "logoLarge": "assets/images/logo-256.png",
+  "shareImage": "assets/images/og-image.jpg",
+  "foundingDate": "2016-01-26",
+  "address": [
+    "Vatakara, Kozhikode (Dist.), Kerala"
+  ],
+  "registrationNumber": "KKD/CA/378/2016",
+  "affiliation": "Nehru Yuva Kendra Sangathan",
+  "email": "office@involve.org.in",
+  "phone": "+91XXXXXXXXXX",
+  "phoneHelp": "PLACEHOLDER. Replace with the office number in international format, e.g. +919876543210. While it contains X the phone, Call and WhatsApp items stay hidden.",
+  "whatsappMessage": "Hello Involve!",
+  "souvenir": {
+    "title": "Petrichore",
+    "url": "https://online.fliphtml5.com/jsppc/xgar/",
+    "cover": "assets/images/petrichore-cover.jpg"
+  },
+  "nav": [
+    {
+      "key": "home",
+      "label": "Home",
+      "href": "index.html"
+    },
+    {
+      "key": "about",
+      "label": "About",
+      "href": "index.html#about"
+    },
+    {
+      "key": "events",
+      "label": "Events",
+      "href": "events.html"
+    },
+    {
+      "key": "green",
+      "label": "Green Project",
+      "href": "green.html"
+    },
+    {
+      "key": "forest",
+      "label": "Involve Forest",
+      "href": "forest.html"
+    },
+    {
+      "key": "contact",
+      "label": "Contact",
+      "href": "index.html#contact"
+    }
+  ],
+  "footer": {
+    "linksTitle": "Explore",
+    "contactTitle": "Contact",
+    "connectTitle": "Follow us",
+    "links": [
+      {
+        "label": "Social media links",
+        "href": "social-media-links.html"
+      },
+      {
+        "label": "Privacy & Terms",
+        "href": "privacy.html"
+      }
+    ],
+    "copyright": "Involve Cultural and Charitable Society, Vatakara. All rights reserved."
+  },
+  "seo": {
+    "title": "Involve | Cultural and Charitable Society, Vatakara, Kerala",
+    "description": "Involve Cultural and Charitable Society is a forum of enthusiastic and like-minded people who have joined together with a vision to create a platform for supporting various social, cultural and educational activities."
+  },
+  "socialPage": {
+    "eyebrow": "Stay connected",
+    "title": "Social media links",
+    "intro": "Follow Involve for news and photos of our activities.",
+    "seo": {
+      "title": "Social Media Links | Involve",
+      "description": "Follow Involve Cultural and Charitable Society on Facebook, YouTube, Instagram, LinkedIn and X."
+    }
+  }
+}

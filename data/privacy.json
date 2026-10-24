@@ -1,0 +1,62 @@
+{
+  "_help": "Privacy & Terms page. Each section has a heading and paragraphs (text supports [link](address), **bold**, {{email}} and {{phone}}). A section can also have a 'list'.",
+  "seo": {
+    "title": "Privacy & Terms | Involve",
+    "description": "Privacy and terms for the Involve Cultural and Charitable Society website: no logins, no forms, no data collection."
+  },
+  "title": "Privacy & Terms",
+  "updated": "Last updated: October 2026",
+  "sections": [
+    {
+      "heading": "Privacy",
+      "paragraphs": [
+        "This website is an information website for Involve Cultural and Charitable Society. It has **no login, no accounts, no forms and no comments**, and we do not ask you for any personal information here. We do not use advertising or analytics tools on this site, and we do not set cookies of our own.",
+        "The site is hosted on GitHub Pages. Like any web host, GitHub may keep basic technical logs (such as your IP address and browser type) when pages are loaded. See [GitHub's privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement)."
+      ]
+    },
+    {
+      "heading": "Contacting us",
+      "paragraphs": [
+        "If you email {{email}}, call or message us on WhatsApp ({{phone}}), we will use the details you share only to reply to you."
+      ]
+    },
+    {
+      "heading": "Links to other websites",
+      "paragraphs": [
+        "This site links to third-party sites and services such as Facebook, YouTube, Instagram, LinkedIn, X, WhatsApp and FlipHTML5 (for our souvenir magazine). We do not control them, and they have their own privacy policies and terms. Please read those before you use them."
+      ]
+    },
+    {
+      "heading": "Donations",
+      "paragraphs": [
+        "Involve's financial assets come from registered members only. We usually don't accept monetary contributions from outsiders. If you wish to donate money for our activities, please do so with proper intimation to Involve officials. Such donors will receive an official acknowledgment letter with the signature from Involve and receipts undersigned by the Treasurer/Secretary. Nothing on this website collects payments."
+      ]
+    },
+    {
+      "heading": "Terms of use",
+      "paragraphs": [
+        "The information on this site is provided in good faith and may change without notice. Photos, text and the Involve name and logo belong to Involve; please ask before reusing them."
+      ]
+    },
+    {
+      "heading": "Our focus",
+      "collapsible": "Read the objectives of Involve",
+      "ordered": true,
+      "list": [
+        "To nurture brotherhood and friendship among people and to work towards the upliftment and integrated development of the people in the area of operation irrespective of caste, creed, religion and political affiliations.",
+        "To involve in social committed activities, support and participate in programs conducted by other groups or govt. agencies for social wellbeing and to motivate people to involve in such activities.",
+        "To involve in social committed activities, support and participate in programs conducted by other groups or govt. agencies for social wellbeing and to motivate people to involve in such activities, including: (a) providing financial and medical assistance for treatments and rehabilitation; (b) providing clothes and food to needy and poor people; (c) providing or rendering monetary and/or other help and assistance for the relief of individuals affected by natural or other calamities; (d) assisting or supporting deserving students who require financial and moral support to attain better education.",
+        "To contribute to the improvement of education through value based education, like establishing academic facilities, conducting seminars, workshops etc. in institutions; either by financially supporting or taking helps from any individuals/organizations that support our goals.",
+        "To coordinate and participate in activities involving blood donation, organ donation etc., and to involve in motivating and educating the society about its importance. To hold, host or conduct medical camps; spreading necessary medical awareness for general improvement of health conditions.",
+        "To research, conserve and promote creative and performing arts, literature and culture.",
+        "To undertake all such lawful activities as are conducive to the attainment of the above objectives."
+      ]
+    },
+    {
+      "heading": "Questions",
+      "paragraphs": [
+        "Email {{email}}. Involve Cultural and Charitable Society, Vatakara, Kozhikode (Dist.), Kerala. Reg. No. KKD/CA/378/2016."
+      ]
+    }
+  ]
+}

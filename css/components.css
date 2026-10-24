@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Involve - components: sections, splits, lists, events, social icons.
+   Flat only: no shadows, no gradients, hairline rules.
+   ========================================================================== */
+.section { padding: var(--section) 0; }
+.section-paper { background: var(--paper); }
+.section-flush { padding-top: 0; }
+.section-rule { border-top: 1px solid var(--line); }
+
+/* two-column block: heading/visual on one side, text on the other */
+.split { display: grid; gap: 40px; align-items: start; }
+.split-head h2 { margin-bottom: .5em; }
+@media (min-width: 900px) {
+  .split { grid-template-columns: 5fr 7fr; gap: 80px; }
+  .split-magazine, .split-green { grid-template-columns: 1fr 1fr; align-items: center; }
+}
+
+/* ---------- pull quote, simple lists ---------- */
+.pullquote { font-family: var(--serif); font-size: clamp(1.45rem, 3.4vw, 2.1rem); line-height: 1.4; color: var(--ink); margin: 0 0 1em; max-width: 30em; }
+.plain-list { list-style: none; counter-reset: n; }
+.plain-list li { counter-increment: n; display: grid; grid-template-columns: 2.4em 1fr; padding: 16px 0; border-top: 1px solid var(--line); }
+.plain-list li:last-child { border-bottom: 1px solid var(--line); margin-bottom: 1.6em; }
+.plain-list li::before { content: counter(n, decimal-leading-zero); color: var(--blue); font-size: .85rem; font-weight: 600; padding-top: .2em; }
+
+/* ---------- events: dated list ---------- */
+.list-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 32px; margin-bottom: 40px; }
+.list-head h2 { margin: 0; }
+.event-list { list-style: none; border-bottom: 1px solid var(--line); }
+.event-row { display: grid; grid-template-columns: 72px 1fr; gap: 8px 24px; padding: 32px 0; border-top: 1px solid var(--line); }
+.event-date { display: flex; flex-direction: column; line-height: 1; padding-top: 4px; }
+.event-day { font-family: var(--serif); font-size: 2.6rem; color: var(--ink); }
+.event-month { margin-top: 8px; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); font-weight: 600; }
+.event-main h3 { margin-bottom: .35em; }
+.event-desc { color: var(--muted); max-width: 38em; margin-bottom: .9em; }
+.event-tags { margin: 0 0 10px; display: flex; gap: 14px; font-size: .72rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.tag-upcoming { color: var(--blue); }
+.event-thumb { grid-column: 1 / -1; background: var(--paper); overflow: hidden; margin-top: 12px; }
+.event-thumb img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; transition: transform .8s var(--ease); }
+.event-row:hover .event-thumb img { transform: scale(1.03); }
+@media (min-width: 760px) {
+  .event-row { grid-template-columns: 110px 1fr 260px; gap: 40px; align-items: start; }
+  .event-day { font-size: 3.6rem; }
+  .event-thumb { grid-column: auto; margin: 0; }
+}
+.tabs { display: flex; flex-wrap: wrap; gap: 8px 28px; margin-bottom: 36px; }
+.tab { min-height: 44px; padding: 0; border: 0; border-bottom: 2px solid transparent; background: none; font: inherit; font-weight: 600; color: var(--muted); cursor: pointer; transition: color .2s, border-color .2s; }
+.tab:hover { color: var(--ink); }
+.tab[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--orange); }
+.empty { padding: 48px 0; color: var(--muted); text-align: center; }
+
+/* ---------- social icons ---------- */
+.social-row { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+.social-row a { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border: 1px solid var(--ink); border-radius: 50%; color: var(--ink); transition: background .25s, color .25s, border-color .25s; }
+.social-row a:hover { background: var(--ink); color: #fff; }
+
+/* ---------- leadership (appears only when data/leadership.json has entries) ---------- */
+.leaders { list-style: none; display: grid; gap: 40px 28px; grid-template-columns: repeat(2, 1fr); }
+.leader img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: var(--line); margin-bottom: 16px; }
+.leader h3 { font-size: 1.25rem; margin-bottom: .1em; }
+.leader-role { color: var(--blue); font-size: .85rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; margin: 0; }
+@media (min-width: 760px) { .leaders { grid-template-columns: repeat(4, 1fr); } }
+
+/* ---------- small states ---------- */
+.noscript-note { padding: 140px var(--gutter) 60px; }
+.noscript-note ul { margin-top: 1em; padding-left: 1.2em; }
+.load-error { padding: 160px var(--gutter) 80px; }

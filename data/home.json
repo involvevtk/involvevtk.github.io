@@ -1,0 +1,91 @@
+{
+  "_help": "Text and media for the Home page sections (except About, Events, Leadership and Contact details, which have their own files).",
+  "seo": {
+    "title": "Involve | Cultural and Charitable Society, Vatakara, Kerala",
+    "description": "Involve Cultural and Charitable Society is a forum of enthusiastic and like-minded people who have joined together with a vision to create a platform for supporting various social, cultural and educational activities."
+  },
+  "hero": {
+    "eyebrow": "Vatakara, Kozhikode, Kerala",
+    "title": "INVOLVE",
+    "subtitle": "Cultural and Charitable Society",
+    "text": "A forum of like-minded people supporting social, cultural and educational activities.",
+    "buttons": [
+      {
+        "label": "See our involvements",
+        "href": "events.html",
+        "style": "solid"
+      },
+      {
+        "label": "Contact us",
+        "href": "#contact",
+        "style": "outline"
+      }
+    ]
+  },
+  "facts": [
+    {
+      "label": "Established",
+      "value": "26 January 2016"
+    },
+    {
+      "label": "Registration No.",
+      "value": "KKD/CA/378/2016"
+    },
+    {
+      "label": "Affiliated to",
+      "value": "Nehru Yuva Kendra Sangathan"
+    },
+    {
+      "label": "Based in",
+      "value": "Vatakara, Kozhikode, Kerala"
+    }
+  ],
+  "video": {
+    "eyebrow": "Meet Involve",
+    "title": "Involve signature video",
+    "src": "assets/video/involve-intro.mp4",
+    "poster": "assets/images/intro-poster.jpg"
+  },
+  "events": {
+    "eyebrow": "Our activities",
+    "title": "Involvements",
+    "buttonLabel": "See all involvements",
+    "maxItems": 3
+  },
+  "green": {
+    "eyebrow": "Involve Nature Cell",
+    "title": "Green Project",
+    "text": "Involve Green is an eco endeavour by Involve to promote nature friendly living. It is a green initiative that encourages the society to embrace nature by promoting the origination and maintenance of vegetations such as Trees, Green Spaces, Tiny Forests, Big Forests and Agricultural Farms.",
+    "image": "assets/images/green-illustration.png",
+    "imageAlt": "Illustration of a green tree",
+    "buttonLabel": "Read about the Green Project",
+    "href": "green.html"
+  },
+  "forest": {
+    "eyebrow": "Involve Forest",
+    "title": "A forest for tomorrow",
+    "text": "A forest for tomorrow, for the earth and for the birds.",
+    "linkLabel": "Click to read more",
+    "href": "forest.html",
+    "video": "assets/video/involve-forest.mp4",
+    "poster": "assets/images/forest-poster.jpg"
+  },
+  "magazine": {
+    "eyebrow": "Souvenir magazine",
+    "text": "Read our souvenir magazine online.",
+    "buttonLabel": "Click to read",
+    "coverAlt": "Petrichore souvenir magazine cover"
+  },
+  "leadership": {
+    "eyebrow": "Our team",
+    "title": "Office bearers"
+  },
+  "contact": {
+    "eyebrow": "Contact us",
+    "title": "In touch with Involve",
+    "intro": "For enquiries, volunteering or collaboration, write to us or call the office.",
+    "getInTouchTitle": "Get in touch",
+    "findUsTitle": "Find us",
+    "followTitle": "Follow us"
+  }
+}
