@@ -166,3 +166,7 @@ Pages are served without `.html` on GitHub Pages (for example `/green` for `gree
 ## Analytics
 
 Google Analytics 4 is set in `data/site.json` under `analytics` (`measurementId`, `hosts`). Set `measurementId` to `""` to turn it off. It only runs on the live domain, never on localhost. Tracked events: page views, `click_call`, `click_whatsapp`, `click_email`, `click_social`, `click_outbound`. The privacy page mentions it; keep that text if you keep analytics.
+
+## Dark / light theme
+
+The sun/moon button in the header switches theme. The choice is saved in a cookie (`involve-theme`, one year); with no cookie the device setting is used. Colours for both themes are the CSS variables at the top of `css/base.css` (`html[data-theme="dark"]` block). `js/theme-init.js` runs first in each page's `<head>` to avoid a flash; `js/theme.js` builds the button.

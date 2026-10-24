@@ -51,7 +51,7 @@
 /* ---------- social icons ---------- */
 .social-row { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
 .social-row a { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border: 1px solid var(--ink); border-radius: 50%; color: var(--ink); transition: background .25s, color .25s, border-color .25s; }
-.social-row a:hover { background: var(--ink); color: #fff; }
+.social-row a:hover { background: var(--ink); color: var(--on-ink); }
 
 /* ---------- leadership (appears only when data/leadership.json has entries) ---------- */
 .leaders { list-style: none; display: grid; gap: 32px 28px; grid-template-columns: 1fr; }
@@ -65,3 +65,6 @@
 .noscript-note { padding: 140px var(--gutter) 60px; }
 .noscript-note ul { margin-top: 1em; padding-left: 1.2em; }
 .load-error { padding: 160px var(--gutter) 80px; }
+
+/* dark theme: tone down bright images so they do not glare */
+html[data-theme="dark"] .event-thumb img, html[data-theme="dark"] .story-media img, html[data-theme="dark"] .magazine-cover img { filter: brightness(.82) contrast(1.02); }

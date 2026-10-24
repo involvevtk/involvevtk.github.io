@@ -7,6 +7,7 @@
 import { el, clear, icon, link, url, loadJSON, phoneInfo, para } from "./core.js";
 import { initMotion } from "./motion.js";
 import { initAnalytics } from "./analytics.js";
+import { themeToggle } from "./theme.js";
 
 /* ---------- SEO / social meta (HTML keeps static defaults; this refines them per page) ---------- */
 function setMeta(selector, attr, value) {
@@ -78,6 +79,8 @@ function renderHeader(site, activeKey) {
   brand.appendChild(logo);
   brand.appendChild(el("span", "brand-name", site.name));
   inner.appendChild(brand);
+
+  inner.appendChild(themeToggle());
 
   const toggle = el("button", "nav-toggle", null, {
     type: "button", "aria-expanded": "false", "aria-controls": "site-nav", "aria-label": "Open menu",

@@ -9,6 +9,9 @@
   --line: #e3e3e3;
   --paper: #f6f6f6;
   --white: #ffffff;
+  --on-ink: #ffffff;   /* text on an --ink background (buttons) */
+  --band: #111111;     /* dark bands: footer, forest section, video frame */
+  --header-bg: rgba(255, 255, 255, .96);
   --blue: #146cb4;     /* logo blue   - links, labels, some headings */
   --orange: #f47800;   /* logo orange - large accents and rules only (low contrast on white) */
 
@@ -20,6 +23,17 @@
   --section: clamp(72px, 12vw, 140px);
   --ease: cubic-bezier(.2, .7, .2, 1);
 }
+
+/* dark theme: switched by html[data-theme="dark"] (see js/theme-init.js and js/theme.js) */
+html[data-theme="dark"] {
+  --ink: #f2f2f2; --text: #cfcfcf; --muted: #9b9b9b; --line: #2e2e2e; --paper: #1a1a1a; --white: #121212;
+  --on-ink: #121212; --band: #0a0a0a; --header-bg: rgba(18, 18, 18, .96);
+  --blue: #5aa9e6;
+  color-scheme: dark;
+}
+html { color-scheme: light; }
+html[data-theme="dark"] { color-scheme: dark; }
+body, .site-header, .section-paper { transition: background-color .35s var(--ease), color .35s var(--ease); }
 
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 88px; }
@@ -40,7 +54,7 @@ address { font-style: normal; }
 
 a { color: var(--blue); text-decoration: none; }
 :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
-.skip-link { position: absolute; left: -999px; top: 8px; background: var(--ink); color: #fff; padding: 10px 16px; z-index: 300; }
+.skip-link { position: absolute; left: -999px; top: 8px; background: var(--ink); color: var(--on-ink); padding: 10px 16px; z-index: 300; }
 .skip-link:focus { left: 8px; }
 
 /* small label above headings: blue text, short orange rule */
@@ -60,14 +74,14 @@ a { color: var(--blue); text-decoration: none; }
 .doc-body a, .prose a, .split-text p a { background-size: 100% 1px; }
 
 /* buttons: flat, square, fill slides in on hover */
-.btn { --bg: var(--ink); --fg: #fff; --bd: var(--ink); --hbg: #fff; --hfg: var(--ink);
+.btn { --bg: var(--ink); --fg: var(--on-ink); --bd: var(--ink); --hbg: var(--white); --hfg: var(--ink);
   position: relative; isolation: isolate; overflow: hidden; display: inline-flex; align-items: center; justify-content: center; gap: 10px;
   min-height: 52px; padding: 12px 30px; border: 1px solid var(--bd); background: var(--bg); color: var(--fg);
   font: inherit; font-size: .95rem; font-weight: 600; letter-spacing: .03em; cursor: pointer; transition: color .3s var(--ease); }
 .btn::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--hbg); transform: translateX(-101%); transition: transform .4s var(--ease); }
 .btn:hover { color: var(--hfg); }
 .btn:hover::before { transform: none; }
-.btn-outline { --bg: transparent; --fg: var(--ink); --bd: var(--ink); --hbg: var(--ink); --hfg: #fff; }
+.btn-outline { --bg: transparent; --fg: var(--ink); --bd: var(--ink); --hbg: var(--ink); --hfg: var(--on-ink); }
 .btn-row { display: flex; flex-wrap: wrap; gap: 14px; }
 .btn .icon { width: 1.15em; height: 1.15em; fill: currentColor; }
 .icon { width: 1.3em; height: 1.3em; fill: currentColor; flex: none; }
