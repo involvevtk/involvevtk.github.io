@@ -2,7 +2,7 @@
 
 Static website for **Involve Cultural and Charitable Society**, Vatakara, Kozhikode, Kerala.
 Plain HTML, CSS and JavaScript. No framework, no build step, no database.
-Live at <https://involvevtk.github.io/>.
+Live at <https://involve.org.in/>.
 
 All text lives in JSON files in [`data/`](data/). The pages are small HTML shells that load those files with JavaScript, so **you update the site by editing a data file, not the code**.
 
@@ -149,7 +149,7 @@ Editing a JSON file directly on github.com (pencil icon) and committing also wor
 
 ### When the real domain (involve.org.in) goes live
 
-The `CNAME` file is intentionally not in this repo yet. When the domain is ready: add a file named `CNAME` containing `involve.org.in`, set `siteUrl` in `data/site.json` to `https://involve.org.in/`, and replace `https://involvevtk.github.io/` with the new address in `sitemap.xml`, `robots.txt` and the `og:url`/`canonical` tags in the HTML files.
+The `CNAME` file is intentionally not in this repo yet. When the domain is ready: add a file named `CNAME` containing `involve.org.in`, set `siteUrl` in `data/site.json` to `https://involve.org.in/`, and replace `https://involve.org.in/` with the new address in `sitemap.xml`, `robots.txt` and the `og:url`/`canonical` tags in the HTML files.
 
 ## Design notes
 
