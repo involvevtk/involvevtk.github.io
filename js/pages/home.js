@@ -22,7 +22,7 @@ runPage("home", async ({ site, social, main }) => {
   renderGreenTeaser(main, home, site);
   renderForestTeaser(main, home);
   renderMagazine(main, home, site);
-  renderLeadership(main, home, people);
   renderContact(main, home, site, social);
+  renderLeadership(main, home, people);
   return { seo: home.seo };
 });
