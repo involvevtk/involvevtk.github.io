@@ -1,15 +1,15 @@
 /* Home page: assembles the sections. Content: data/home.json, about.json, events.json, leadership.json, site.json */
-import { runPage } from "../layout.js?v=202610242042";
-import { loadJSON } from "../core.js?v=202610242042";
-import { renderHero } from "../render/hero.js?v=202610242042";
-import { renderVideo } from "../render/video.js?v=202610242042";
-import { renderAbout } from "../render/about.js?v=202610242042";
-import { renderEventsTeaser } from "../render/events.js?v=202610242042";
-import { renderGreenTeaser } from "../render/green.js?v=202610242042";
-import { renderForestTeaser } from "../render/forest.js?v=202610242042";
-import { renderMagazine } from "../render/magazine.js?v=202610242042";
-import { renderLeadership } from "../render/leadership.js?v=202610242042";
-import { renderContact } from "../render/contact.js?v=202610242042";
+import { runPage } from "../layout.js?v=202610242046";
+import { loadJSON } from "../core.js?v=202610242046";
+import { renderHero } from "../render/hero.js?v=202610242046";
+import { renderVideo } from "../render/video.js?v=202610242046";
+import { renderAbout } from "../render/about.js?v=202610242046";
+import { renderEventsTeaser } from "../render/events.js?v=202610242046";
+import { renderGreenTeaser } from "../render/green.js?v=202610242046";
+import { renderForestTeaser } from "../render/forest.js?v=202610242046";
+import { renderMagazine } from "../render/magazine.js?v=202610242046";
+import { renderLeadership } from "../render/leadership.js?v=202610242046";
+import { renderContact } from "../render/contact.js?v=202610242046";
 
 runPage("home", async ({ site, social, main }) => {
   const [home, about, events, people] = await Promise.all([

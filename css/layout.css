@@ -60,22 +60,22 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 main { display: block; min-height: 60vh; }
 
 /* ---------- Footer ---------- */
-.site-footer { background: var(--band); color: #bdbdbd; padding: 72px 0 36px; font-size: .95rem; }
+.site-footer { background: var(--band); color: var(--band-text); padding: 72px 0 36px; font-size: .95rem; }
 .footer-grid { display: grid; gap: 44px; grid-template-columns: 1fr; }
-.footer-brand img { width: 56px; height: 56px; background: #fff; border-radius: 50%; padding: 4px; margin-bottom: 18px; }
-.footer-name { font-family: var(--serif); color: #fff; font-size: 1.4rem; letter-spacing: .22em; margin: 0 0 2px; }
-.footer-org { color: #fff; margin: 0 0 14px; }
+.footer-brand img { width: 56px; height: 56px; background: var(--band-chip); border-radius: 50%; padding: 4px; margin-bottom: 18px; }
+.footer-name { font-family: var(--serif); color: var(--band-strong); font-size: 1.4rem; letter-spacing: .22em; margin: 0 0 2px; }
+.footer-org { color: var(--band-strong); margin: 0 0 14px; }
 .footer-reg { margin: 0 0 2px; }
-.footer-title { font-family: var(--sans); font-size: .75rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #fff; margin: 0 0 16px; }
+.footer-title { font-family: var(--sans); font-size: .75rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--band-strong); margin: 0 0 16px; }
 .footer-title-sub { margin-top: 28px; }
 .footer-links { list-style: none; }
 .footer-links li { margin-bottom: 4px; }
-.site-footer a { color: #e6e6e6; }
-.site-footer a:hover { color: #fff; }
+.site-footer a { color: var(--band-link); }
+.site-footer a:hover { color: var(--band-strong); }
 .site-footer address { line-height: 1.9; }
-.site-footer .social-row a { border-color: #444; color: #e6e6e6; }
-.site-footer .social-row a:hover { background: #fff; border-color: #fff; color: var(--ink); }
-.copyright { margin: 56px 0 0; padding-top: 24px; border-top: 1px solid #2c2c2c; font-size: .85rem; color: #8a8a8a; }
+.site-footer .social-row a { border-color: var(--band-border); color: var(--band-link); }
+.site-footer .social-row a:hover { background: var(--band-strong); border-color: var(--band-strong); color: var(--band); }
+.copyright { margin: 56px 0 0; padding-top: 24px; border-top: 1px solid var(--band-rule); font-size: .85rem; color: var(--band-muted); }
 
 @media (min-width: 760px) {
   .footer-grid { grid-template-columns: 1.3fr 1fr 1.2fr; gap: 64px; }

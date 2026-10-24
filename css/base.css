@@ -2,6 +2,8 @@
    Involve - base: colours, type, buttons, links, motion.
    Palette: black, white, greys + the two logo colours (blue, orange) as accents.
    ========================================================================== */
+/* RULE: colours are only ever written in this file's two variable blocks (:root and
+   html[data-theme="dark"]). Everywhere else use var(--...). `python3 tools/check-colors.py` enforces it. */
 :root {
   --ink: #111111;
   --text: #2a2a2a;
@@ -12,6 +14,9 @@
   --on-ink: #ffffff;   /* text on an --ink background (buttons) */
   --band: #111111;     /* dark bands: footer, forest section, video frame */
   --header-bg: rgba(255, 255, 255, .96);
+  /* dark bands (footer, forest section): always dark, in both themes */
+  --band-strong: #ffffff;  --band-text: #d4d4d4;  --band-link: #e6e6e6;
+  --band-muted: #8a8a8a;   --band-border: #444444; --band-rule: #2c2c2c; --band-chip: #ffffff;
   --blue: #146cb4;     /* logo blue   - links, labels, some headings */
   --orange: #f47800;   /* logo orange - large accents and rules only (low contrast on white) */
 

@@ -1,5 +1,5 @@
 /* Home: "Who We Are" + Our Story / Mission / Vision (data/about.json). */
-import { el, url, reveal, section, para } from "../core.js?v=202610242042";
+import { el, url, reveal, section, para } from "../core.js?v=202610242046";
 
 export function renderAbout(main, about, site) {
   const { section: s, wrap } = section({ id: "about" });

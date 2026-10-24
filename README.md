@@ -180,3 +180,13 @@ python3 tools/bump-version.py
 ```
 
 It stamps a new `?v=` number on all CSS and JS links. Content in `data/` is always fetched fresh, so editing only data files needs nothing extra (an image replaced under the same file name can still take up to 10 minutes; use a new file name to see it at once).
+
+## Colours: always use variables
+
+Colours are written only in the two variable blocks at the top of `css/base.css` (`:root` for light, `html[data-theme="dark"]` for dark). Everywhere else use `var(--name)`. Run this before pushing; it fails if a hard-coded colour sneaks in:
+
+```
+python3 tools/check-colors.py
+```
+
+Placeholder images in `assets/images/` are transparent PNGs, so they follow the theme background; real photos are slightly dimmed in dark mode.

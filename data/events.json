@@ -14,7 +14,7 @@
     {
       "title": "Tree Planting Drive",
       "description": "A community tree planting morning with volunteers, school students and neighbours.",
-      "bannerImage": "assets/images/events/sample-2.jpg",
+      "bannerImage": "assets/images/events/sample-2.png",
       "readMoreLink": "https://www.facebook.com/involvevatakaraofficial",
       "eventDate": "2026-06-05",
       "featured": true
@@ -22,7 +22,7 @@
     {
       "title": "Blood Donation Camp",
       "description": "Volunteers coordinate a one-day blood donation camp with a local hospital.",
-      "bannerImage": "assets/images/events/sample-1.jpg",
+      "bannerImage": "assets/images/events/sample-1.png",
       "readMoreLink": "https://www.facebook.com/involvevatakaraofficial",
       "eventDate": "2026-01-26",
       "featured": true
@@ -30,7 +30,7 @@
     {
       "title": "Student Support Programme",
       "description": "Study kits and guidance for deserving students from nearby schools.",
-      "bannerImage": "assets/images/events/sample-3.jpg",
+      "bannerImage": "assets/images/events/sample-3.png",
       "readMoreLink": "",
       "eventDate": "2025-08-15",
       "featured": false

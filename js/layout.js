@@ -4,10 +4,10 @@
  * all built from data/site.json (and data/social.json), so they are edited in
  * one place and stay identical on every page.
  */
-import { el, clear, icon, link, url, loadJSON, phoneInfo, para } from "./core.js?v=202610242042";
-import { initMotion } from "./motion.js?v=202610242042";
-import { initAnalytics } from "./analytics.js?v=202610242042";
-import { themeToggle } from "./theme.js?v=202610242042";
+import { el, clear, icon, link, url, loadJSON, phoneInfo, para } from "./core.js?v=202610242046";
+import { initMotion } from "./motion.js?v=202610242046";
+import { initAnalytics } from "./analytics.js?v=202610242046";
+import { themeToggle } from "./theme.js?v=202610242046";
 
 /* ---------- SEO / social meta (HTML keeps static defaults; this refines them per page) ---------- */
 function setMeta(selector, attr, value) {
