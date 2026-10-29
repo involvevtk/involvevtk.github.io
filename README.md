@@ -39,9 +39,9 @@ All text lives in JSON files in [`data/`](data/). The pages are small HTML shell
 │   ├── components.css            lists, events, social icons, leadership
 │   └── pages.css                 page and section specific styles
 ├── assets/
-│   ├── images/                   logo, event banners, section images, share image
+│   ├── images/                   logo, section photos, placeholders, share image
 │   ├── icons/sprite.svg          social and contact icons
-│   └── video/                    intro and forest videos
+│   └── video/                    intro video (placeholder)
 ├── sitemap.xml, robots.txt
 └── favicon.ico, favicon-32x32.png, apple-touch-icon.png, android-chrome-512x512.png
 ```
@@ -85,7 +85,7 @@ A list; one entry per network: `id` (`facebook`, `youtube`, `instagram`, `linked
 
 ### `data/about.json` - Who We Are
 
-`eyebrow`, `title`, `intro` and `cards`: the three rows (Our Story, Mission, Vision), each with `title`, `text`, `image`, `imageAlt`.
+`eyebrow`, `title`, `intro` and `cards`: the three rows (Our Story, Mission, Vision), each with `title`, `text` and optionally `image`, `imageAlt`. With no image the row is text only.
 
 ### `data/events.json` - events
 
@@ -105,7 +105,8 @@ Add one block per event inside `"events": [ ... ]`, newest anywhere (the site so
 * `eventDate` must be `YYYY-MM-DD`. Future dates get an "Upcoming" label.
 * `featured: true` shows the event on the home page (the first three are used).
 * `bannerImage` and `readMoreLink` are optional; leave them out to hide the image or link.
-* The three current events are **samples** (they carry `"sample": true` and a "Sample" label). Delete them or replace them with real ones.
+* The three current events (Tree Planting Drive, Blood Donation Camp, Student Support Programme) are **made-up samples with no label**. Replace them with real events before promoting the site.
+* With no `bannerImage` the event shows as a clean text row (no empty image box).
 * Year filter buttons on the Events page appear automatically.
 
 ### `data/green.json`, `data/forest.json`, `data/privacy.json` - inner pages
@@ -147,16 +148,22 @@ git add -A && git commit -m "Update content" && git push origin main
 
 Editing a JSON file directly on github.com (pencil icon) and committing also works.
 
-### When the real domain (involve.org.in) goes live
+### Domain and hosting (live)
 
-The `CNAME` file is intentionally not in this repo yet. When the domain is ready: add a file named `CNAME` containing `involve.org.in`, set `siteUrl` in `data/site.json` to `https://involve.org.in/`, and replace `https://involve.org.in/` with the new address in `sitemap.xml`, `robots.txt` and the `og:url`/`canonical` tags in the HTML files.
+* Repo: `involvevtk/involvevtk.github.io` (GitHub user `involvevtk`), branch `main`, served by GitHub Pages.
+* Domain `involve.org.in` is registered at **GoDaddy** and its DNS is managed there, nameservers `ns63`/`ns64.domaincontrol.com` (Amazon Route 53 is no longer used; Cloudflare is an option). The `CNAME` file holds `involve.org.in`. "Enforce HTTPS" is on in the repo's Pages settings.
+* GoDaddy DNS: four `A` records for `@` pointing to GitHub Pages (`185.199.108.153`, `.109.153`, `.110.153`, `.111.153`) and a `CNAME` for `www` pointing to `involvevtk.github.io`.
+* `siteUrl`, `sitemap.xml`, `robots.txt` and the canonical/`og:url` tags already use `https://involve.org.in/`.
+* There is no server, database or login. The old site (Express/React/MongoDB, events stored in a database) has been replaced by this one.
 
 ## Design notes
 
 * Colours: black, white and greys, with the two logo colours (blue `#146cb4`, orange `#f47800`) for some headings, labels and links. Defined at the top of `css/base.css`.
 * Flat design: no shadows, no gradients. Motion (fade-in on scroll, hover lines) is switched off automatically for visitors who prefer reduced motion.
 * Accessibility: skip link, visible keyboard focus, 44px tap targets, alt text for images.
-* The images and videos in `assets/` other than the logo and icons are **placeholders**; replace them with real files of the same name or update the paths in the JSON.
+* Each section has its own look (plain, grey band, dark band, photo band) with smooth transitions between them. No cards.
+* Photos: `green-forest.jpg` (Green Project) and `forest-poster.jpg` (birds over a forest canopy, behind the home Involve Forest band) are AI-generated stand-ins. `intro-poster.png`, `petrichore-cover.jpg` and `assets/video/involve-intro.mp4` are placeholders (the real signature video is still to come). Replace with real files of the same name or update the paths in the JSON.
+* The home Forest band shows `forest.poster` as a photo; add `"video": "assets/video/xyz.mp4"` to `home.json` → `forest` to play a muted looping video over it on wide screens.
 
 
 ## Clean URLs
@@ -165,7 +172,7 @@ Pages are served without `.html` on GitHub Pages (for example `/green` for `gree
 
 ## Analytics
 
-Google Analytics 4 is set in `data/site.json` under `analytics` (`measurementId`, `hosts`). Set `measurementId` to `""` to turn it off. It only runs on the live domain, never on localhost. Tracked events: page views, `click_call`, `click_whatsapp`, `click_email`, `click_social`, `click_outbound`. The privacy page mentions it; keep that text if you keep analytics.
+Google Analytics 4 is set in `data/site.json` under `analytics` (`measurementId`, `hosts`). Set `measurementId` to `""` to turn it off. It only runs on the live domain, never on localhost. The GA4 property (ID `G-MD2RY6P5RH`) sits in the owner's personal Google account (dipakchandranp), not a shared Involve account. Tracked events: page views, `click_call`, `click_whatsapp`, `click_email`, `click_social`, `click_outbound`. The privacy page mentions it; keep that text if you keep analytics.
 
 ## Dark / light theme
 
@@ -190,3 +197,27 @@ python3 tools/check-colors.py
 ```
 
 Placeholder images in `assets/images/` are transparent PNGs, so they follow the theme background; real photos are slightly dimmed in dark mode.
+
+## Checking before every push
+
+Every change is checked on phone (390px) and desktop (1280px) widths, in both light and dark theme, before it is pushed. Run `python3 serve.py` (clean URLs, port 8080) and look at every page, or use a headless browser such as Playwright to screenshot each page in both themes (set the `involve-theme` cookie to `light`/`dark`). Look for: empty or plain-looking blocks, the same image shown twice, text with poor contrast in either theme, sideways scrolling on phones, and console errors.
+
+Push checklist:
+
+```
+python3 tools/check-colors.py      # no hard-coded colours
+python3 tools/bump-version.py      # new cache version
+git add -A && git commit -m "..." && git push origin main
+```
+
+## Still to do (waiting for real content)
+
+* Office phone number (`data/site.json` → `phone`; Call/WhatsApp buttons stay hidden until set).
+* Office bearers: President, General Secretary, Treasurer (`data/leadership.json`).
+* Real events to replace the three samples (`data/events.json`).
+* The full signature video (current file is a 3-second placeholder) and real photos.
+* A real link for "Involve by Law", if there is one.
+
+## For an AI assistant picking this up
+
+Read this whole file first. Owner's standing preferences: minimal, formal, flat organisation-style design; black/white/grey with the logo blue/orange only for some headings, labels and links; no cards, shadows or 3D; lots of whitespace; mobile first; English only; clean URLs; all content in `data/*.json`; colours only through the variables in `css/base.css`; dark and light themes both working; short replies; check everything on mobile and desktop in both themes before pushing.
